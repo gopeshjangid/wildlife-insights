@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700"
+      rel="stylesheet"
+    />
+
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+        font-size: 100%;
+        font-family: Roboto, 'Helvetica Neue', Arial, sans-serif;
+        color: #434043;
+        line-height: 1.65;
+      }
+
+      img {
+        max-width: 100%;
+        margin: 0 auto;
+        display: block;
+      }
+
+      body,
+      .body-wrap {
+        width: 100% !important;
+        height: 100%;
+        background: #fdfdfd;
+      }
+
+      .content-wrap {
+        width: 100% !important;
+        border-collapse: collapse;
+      }
+
+      a {
+        color: #338650;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .text-right {
+        text-align: right;
+      }
+
+      .text-left {
+        text-align: left;
+      }
+
+      .button {
+        display: inline-block;
+        margin: 20px 0;
+        padding: 10px 30px;
+        border-radius: 10px;
+        background-color: #72c990;
+        box-shadow: 0 3px 6px 0 rgba(114, 201, 144, 0.4);
+        text-decoration: none;
+        color: #434043;
+      }
+
+      p,
+      ul,
+      ol {
+        font-size: 16px;
+        font-weight: normal;
+        margin-bottom: 20px;
+      }
+
+      .container {
+        display: block !important;
+        clear: both !important;
+        margin: 0 auto !important;
+        max-width: 580px !important;
+      }
+
+      .masthead {
+        padding-bottom: 10px;
+      }
+
+      .masthead img {
+        max-width: 199px;
+      }
+
+      .masthead h1 {
+        margin: 0 auto !important;
+        padding: 30px;
+        max-width: 100%;
+        box-shadow: 2px 0 15px 0 rgba(31, 35, 35, 0.08);
+        background: white;
+      }
+
+      .container table {
+        width: 100% !important;
+      }
+
+      .content {
+        padding: 30px 35px;
+      }
+
+      .content h2 {
+        margin: 30px 0;
+        font-size: 32px;
+        font-weight: bold;
+        line-height: 34px;
+        text-align: center;
+      }
+
+      .content p {
+        text-align: center;
+      }
+
+      .content.footer {
+        border-top: 1px solid #cbccd0;
+      }
+
+      .content.footer p {
+        margin-bottom: 0;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      .content.footer a {
+        text-decoration: none;
+      }
+
+      .content.footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <table class="body-wrap">
+      <tr>
+        <td>
+          <table class="content-wrap">
+            <tr>
+              <td align="center" class="masthead">
+                <h1><img src="{{{logoUrl}}}" alt="Wildlife Insights" /></h1>
+              </td>
+            </tr>
+            <tr>
+              <td class="content">
+                <div class="container">
+                  <h2>Permissions changed!</h2>
+
+                  <p>
+                    {{{name}}} (<a href="mailto:{{{email}}}">{{{email}}}</a>)
+                    changed your permissions from
+                    <strong>{{{oldRole}}}</strong> to
+                    <strong>{{{newRole}}}</strong> for the {{{entity}}} "{{{entityName
+                    }}}".
+                  </p>
+
+                  <table>
+                    <tr>
+                      <td align="center">
+                        <p>
+                          <a href="{{{entityUrl}}}" class="button"
+                            >Check it out</a
+                          >
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <p>
+                    Link doesn’t work? Copy this one into your browser’s address
+                    bar:<br />
+                    <a href="{{{entityUrl}}}">{{{entityUrl}}}</a>
+                  </p>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td class="container">
+          <table>
+            <tr>
+              <td class="content footer" align="center">
+                <p>Sent by <a href="{{{homeUrl}}}">Wildlife Insights</a></p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

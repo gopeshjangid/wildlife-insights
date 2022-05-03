@@ -1,0 +1,27 @@
+@import 'css/settings';
+
+.preset-wrapper {
+  width: 36%;
+  .save-btn {
+    text-align: right !important;
+  }
+
+  .preset-input {
+    box-shadow: none;
+    border: none;
+  }
+
+  .preset-container {
+    width: 100%;
+  }
+
+  .preset-name {
+    margin-bottom: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    span {
+      font-weight: bold;
+    }
+  }
+}

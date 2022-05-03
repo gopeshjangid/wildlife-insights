@@ -1,0 +1,5 @@
+mutation createDataProviderNotification($dataProviderNotificationsCreateRequest: DataProviderNotificationsCreateRequest) {
+  createDataProviderNotification(dataProviderNotificationsCreateRequest: $dataProviderNotificationsCreateRequest) {
+    projectId
+  }
+}

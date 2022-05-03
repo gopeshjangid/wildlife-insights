@@ -1,0 +1,12 @@
+mutation requestPublicDownloadBundle(
+  $filters: DiscoverObservationFilters
+  $publicDownloadRequest: PublicDownloadRequestCreate
+) {
+  requestPublicDownloadBundle(
+    filters: $filters
+    publicDownloadRequest: $publicDownloadRequest
+  ) {
+    jobId
+    status
+  }
+}

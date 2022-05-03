@@ -1,0 +1,7 @@
+query checkUploadStatusq($projectId: Int!, $deploymentId: Int!, $id: ID!) {
+  checkUploadStatus(
+    projectId: $projectId
+    deploymentId: $deploymentId
+    id: $id
+  )
+}

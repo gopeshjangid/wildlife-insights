@@ -1,0 +1,27 @@
+query getProjects(
+  $shortName: String
+  $pageSize: Int
+  $pageNumber: Int
+  $sort: [Sort]
+) {
+  getProjects(
+    filters: { shortName: $shortName }
+    pagination: { pageSize: $pageSize, pageNumber: $pageNumber, sort: $sort }
+  ) {
+    data {
+      id
+      organizationId
+      name
+      shortName
+      organization {
+        id
+        name
+      }
+      updatedAt
+    }
+    meta {
+      totalPages
+      totalItems
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "globals": {
+    "Transifex": true,
+    "t": true,
+    "google": true
+  },
+  "extends": ["vizzuality", "plugin:jest/recommended"],
+  "rules": {
+    "jsx-a11y/anchor-is-valid": 0,
+    "jsx-a11y/label-has-for": 0,
+    "jsx-a11y/label-has-associated-control": [
+      2,
+      {
+        "controlComponents": ["Text", "TextArea", "Select"],
+        "depth": 3
+      }
+    ],
+    "import/extensions": "off",
+    "import/no-extraneous-dependencies": [
+      2,
+      {
+        "devDependencies": true
+      }
+    ],
+    "import/no-unresolved": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  "parser": "babel-eslint",
+  "plugins": ["babel", "jest", "react-hooks"],
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  }
+}

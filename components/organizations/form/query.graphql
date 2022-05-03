@@ -1,0 +1,15 @@
+query getOrganization($organizationId: ID!) {
+  getOrganization(organizationId: $organizationId) {
+    id
+    name
+    streetAddress
+    city
+    state
+    postalCode
+    phone
+    email
+    countryCode
+    organizationUrl
+    remarks
+  }
+}

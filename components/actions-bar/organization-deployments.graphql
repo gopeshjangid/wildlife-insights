@@ -1,0 +1,15 @@
+query getDeployments($organizationId: Int!, $name: String) {
+  getDeploymentsByOrganization(
+    organizationId: $organizationId
+    filters: { name: $name }
+    pagination: {
+      pageSize: 50
+      sort: { column: "deploymentName", order: "ASC" }
+    }
+  ) {
+    data {
+      id
+      deploymentName
+    }
+  }
+}

@@ -1,0 +1,5 @@
+mutation createBulkIdentification($body: IdentificationOutputBulkCreate!) {
+  createIdentificationOutputBulk(body: $body) {
+    id
+  }
+}

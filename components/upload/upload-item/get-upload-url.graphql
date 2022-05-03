@@ -1,0 +1,16 @@
+query getUploadUrl(
+  $projectId: Int!
+  $deploymentId: Int!
+  $fileName: String!
+  $contentType: String!
+) {
+  getUploadUrl(
+    projectId: $projectId
+    deploymentId: $deploymentId
+    fileName: $fileName
+    contentType: $contentType  
+  ) {
+      id
+      mainUrl
+  }
+}

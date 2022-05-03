@@ -1,0 +1,6 @@
+mutation getLatestBatchDownloadDetails($entityType: EntityType, $entityId: Int) {
+  getLatestBatchDownloadDetails(entityType: $entityType, entityId: $entityId) {
+    requestTime
+    availableNow
+  }
+}

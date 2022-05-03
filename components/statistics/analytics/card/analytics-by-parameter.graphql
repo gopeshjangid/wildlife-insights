@@ -1,0 +1,23 @@
+query getAnalyticsByParameter($organizationId: Int, $initiativeId: Int, $projectId: Int, $parameterKey: String) {
+  getAnalyticsByParameter(
+    organizationId: $organizationId
+    initiativeId: $initiativeId
+    projectId: $projectId
+    parameterKey: $parameterKey
+  ) {
+    numImages
+    numSequences
+    numSpecies
+    numDevices
+    numDeployments
+    averageNumberOfImagesPerDeployment
+    avgNumberOfSequencesPerDeployment
+    uniqueLocations
+    samplingDaysCount
+    projectCount
+    wildlifeImagesCount
+    wildlifeSequencesCount
+    firstSurveyDate
+    lastSurveyDate
+  }
+}

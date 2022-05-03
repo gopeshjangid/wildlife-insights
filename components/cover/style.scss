@@ -1,0 +1,35 @@
+@import 'css/settings';
+
+.c-cover {
+  position: relative;
+  width: 100%;
+  height: rem(530);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $primary-alt;
+
+  > .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($black, .2);
+  }
+
+  > .content {
+    position: relative; // Mandatory so the content is on top
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+
+    h1 {
+      color: $white;
+      letter-spacing: rem(-0.2);
+    }
+  }
+}

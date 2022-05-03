@@ -1,0 +1,10 @@
+query getTaxonomies($taxonomyUUIDs: [String]) {
+  getTaxonomies(filters: { taxonomyUUIDs: $taxonomyUUIDs }) {
+    data {
+      id
+      scientificName
+      commonNameEnglish
+      uniqueIdentifier
+    }
+  }
+}

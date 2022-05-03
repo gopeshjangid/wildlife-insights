@@ -1,0 +1,7 @@
+mutation createSubProject($projectId: Int!, $body: SubProjectCreate!) {
+  createSubProject(projectId: $projectId, body: $body) {
+    id
+    name
+    design
+  }
+}

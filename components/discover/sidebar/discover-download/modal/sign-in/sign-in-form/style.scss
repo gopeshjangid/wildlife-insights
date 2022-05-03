@@ -1,0 +1,29 @@
+@import 'css/settings';
+
+.signin-form {
+  .no-account {
+    color: $black;
+    margin-bottom: rem(3);
+  }
+
+  input:disabled {
+    cursor: not-allowed;
+  }
+
+  button {
+    padding: rem(6) rem(17);
+    font-size: rem(14);
+    color: $black;
+  }
+
+  .spinner {
+    max-height: rem(34);
+    position: relative;
+    bottom: rem(19);
+  }
+
+  .form-actions {
+    float: right;
+    margin-top: rem(16);
+  }
+}

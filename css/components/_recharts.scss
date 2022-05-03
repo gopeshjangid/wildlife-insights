@@ -1,0 +1,47 @@
+$chart-line-color: $body-color;
+$chart-text-color: $grey;
+$chart-text-size: rem(12);
+
+.recharts-responsive-container {
+  margin-top: $ui-space;
+}
+
+.recharts-cartesian-grid line {
+  shape-rendering: crispedges;
+  stroke: $chart-line-color;
+  opacity: 0.3;
+}
+
+.recharts-text {
+  color: $chart-text-color;
+  fill: $chart-text-color;
+  font-size: $chart-text-size;
+
+  &.recharts-label {
+    font-size: $small-font-size;
+  }
+}
+
+.recharts-cartesian-axis {
+  shape-rendering: crispedges;
+
+  .recharts-cartesian-axis-line,
+  .recharts-cartesian-axis-tick-line {
+    shape-rendering: crispedges;
+    stroke: $chart-line-color;
+    opacity: 0.3;
+  }
+}
+
+.recharts-text.recharts-label.custom-center-label {
+  font-size: 48px;
+  font-weight: 300;
+
+  &.medium {
+    font-size: 36px;
+  }
+
+  &.small {
+    font-size: 24px;
+  }
+}

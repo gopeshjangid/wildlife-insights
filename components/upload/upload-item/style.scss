@@ -1,0 +1,10 @@
+@import 'css/settings';
+
+.c-upload-item {
+  .c-progress-spinner {
+    position: absolute;
+    top: 50%;
+    right: rem(10);
+    transform: translateY(-50%);
+  }
+}

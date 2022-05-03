@@ -1,0 +1,29 @@
+query getDevices(
+  $organizationId: Int!
+  $pageSize: Int
+  $pageNumber: Int
+  $sort: [Sort]
+  $filters: DeviceFilters
+) {
+  getDevices(
+    organizationId: $organizationId
+    filters: $filters
+    pagination: { pageSize: $pageSize, pageNumber: $pageNumber, sort: $sort }
+  ) {
+    data {
+      id
+      name
+      model
+      serialNumber
+      purchaseDate
+      purchasePrice
+      productUrl
+      remarks
+      canDelete
+    }
+    meta {
+      totalPages
+      totalItems
+    }
+  }
+}

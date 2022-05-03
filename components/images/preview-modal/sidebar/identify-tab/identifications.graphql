@@ -1,0 +1,49 @@
+query getIdentifications(
+  $projectId: Int!
+  $dataFileId: [Int!]
+) {
+  getIdentificationOutputs(
+    projectId: $projectId
+    dataFileId: $dataFileId
+    pagination: { pageSize: 999, sort: {column: "id", order: "DESC"} }
+  ) {
+    data {
+      id
+      dataFileId
+      blankYn
+      timestamp
+      identificationMethod {
+        type
+        mlIdentification
+      }
+      participantId
+      participant {
+        firstName
+        lastName
+      }
+      dataFile {
+        metadata
+      }
+      identifiedObjects {
+        id
+        taxonomyId
+        taxonomy {
+          family
+          genus
+          species
+          class
+          order
+          commonNameEnglish
+          scientificName
+        }
+        relativeAge
+        sex
+        markings
+        behavior
+        remarks
+        count
+      }
+      confidence
+    }
+  }
+}

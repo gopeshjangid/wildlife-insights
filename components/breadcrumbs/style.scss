@@ -1,0 +1,41 @@
+@import 'css/settings';
+
+.c-breadcrumbs {
+  margin-top: map-get($spacers, 5);
+  padding-left: #{$out-space / 2};
+  padding-right: #{$out-space / 2};
+
+  @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+    padding-left: $out-space;
+    padding-right: $out-space;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      &:not(:last-child):after {
+        display: inline-block;
+        padding: 0 1ch;
+        font-weight: $font-weight-bold;
+        content: '/';
+      }
+    }
+  }
+
+  a {
+    font-weight: $font-weight-bold;
+    text-decoration: underline;
+  }
+
+  .help-links {
+    float: right;
+    padding-left: rem(15);
+  }
+}

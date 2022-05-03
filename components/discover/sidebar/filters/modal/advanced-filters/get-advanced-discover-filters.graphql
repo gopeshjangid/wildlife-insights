@@ -1,0 +1,82 @@
+query getAdvancedDiscoverFilters(
+  $countries: [String]
+  $timespan: TimespanInput
+  $initiatives: [Int]
+  $projects: [Int]
+  $metadataLicense: [String]
+  $baitUse: [String]
+  $baitType: [String]
+  $sensorLayout: [String]
+  $sensorMethod: String
+  $sensorCluster: String
+  $taxonomyClass: [String]
+  $taxonomyOrder: [String]
+  $taxonomyFamily: [String]
+  $taxonomyGenus: [String]
+  $taxonomySpecies: [String]
+  $filterKey: String
+  $searchKey: String
+  $featureTypes: [String]
+  $taxonomyCommonName: [String]
+  $continents: [String]
+  $organizations: [Int]
+) {
+  getAdvancedDiscoverFilters(
+    filters: {
+      countries: $countries
+      timespan: $timespan
+      initiatives: $initiatives
+      projectIds: $projects
+      metadataLicense: $metadataLicense
+      baitUse: $baitUse
+      baitType: $baitType
+      sensorLayout: $sensorLayout
+      sensorMethod: $sensorMethod
+      sensorCluster: $sensorCluster
+      taxonomyClass: $taxonomyClass
+      taxonomyOrder: $taxonomyOrder
+      taxonomyFamily:$taxonomyFamily
+      taxonomyGenus: $taxonomyGenus
+      taxonomySpecies: $taxonomySpecies
+      featureTypes: $featureTypes
+      taxonomyCommonName: $taxonomyCommonName
+      continents: $continents
+      organizations: $organizations
+    }
+    filterKey: $filterKey
+    searchKey: $searchKey
+  ) {
+      data {
+        projects {
+            id
+            shortName
+        }
+        organizations {
+            id
+            name
+        }
+        initiatives {
+            id
+            name
+        }
+        countries
+        taxonomyClass
+        taxonomyOrder
+        taxonomyFamily
+        taxonomyGenus
+        taxonomySpecies
+        taxonomyCommonName
+        baitUse
+        baitType
+        featureTypes
+        sensorLayout
+        sensorMethod
+        sensorCluster
+        metadataLicense
+        imageLicense
+        embargo
+        blankImages
+        continents
+      }    
+  }
+}

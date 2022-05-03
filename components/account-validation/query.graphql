@@ -1,0 +1,13 @@
+query getParticipants {
+  getParticipants(
+    filters: { whitelisted: false }
+    pagination: { pageSize: 100000 }
+  ) {
+    data {
+      id
+      firstName
+      lastName
+      email
+    }
+  }
+}

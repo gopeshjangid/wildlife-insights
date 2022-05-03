@@ -1,0 +1,64 @@
+@import 'css/settings';
+
+.c-download-metrics {
+  .heading {
+    color: $shark;
+    font-size: rem(24);
+    font-weight: 700;
+    margin-bottom: rem(17);
+    img {
+      margin-left: rem(10);
+    }
+  }
+
+  .see-all {
+    color: $forest-green;
+    font-size: rem(14);
+    vertical-align: middle;
+    line-height: rem(30);
+    font-weight: 500;
+  }
+
+  .sub-heading {
+    color: $shark;
+    font-size: rem(14);
+    font-weight: 400;
+  }
+
+  .messages {
+    .message-box {
+      width: 24.5%;
+      border: solid rem(1) $speech-green;
+      border-radius: rem(8);
+      height: rem(140);
+      padding: rem(24);
+      color: $shuttle-grey;
+      .date {
+        margin-bottom: rem(5);
+      }
+      .btn-approve {
+        background-color: $primary-alt;
+        border-radius: .3125rem;
+        cursor: pointer;
+        margin-right: 1.4375rem;
+        color: $white;
+        font-weight: 400;
+      }
+      .btn-deny {
+        color: $primary-alt;
+        &:active, &:focus {
+          box-shadow: none;
+        }
+      }
+      .mrg-top-2 {
+        margin-top: rem(2);
+      }
+      .project {
+        color: $shark;
+        font-size: rem(14);
+        font-weight: 500;
+        margin-bottom: rem(5);
+      }
+    }
+  }
+}

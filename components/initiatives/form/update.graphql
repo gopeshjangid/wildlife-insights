@@ -1,0 +1,17 @@
+mutation updateInitiative($id: ID!, $body: InitiativeUpdate!) {
+  updateInitiative(initiativeId: $id, body: $body) {
+    id
+    name
+    description
+    introduction
+    content
+    contactContent
+    contactEmail
+    videoUrl
+    isLocationPublic
+    ownerOrganization {
+      id
+      name
+    }
+  }
+}

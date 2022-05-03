@@ -1,0 +1,340 @@
+@import 'css/settings';
+
+.analytics-filter-container {
+  min-width: rem(975);
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    li {
+      cursor: pointer;
+      span.taxonomy {
+        margin-left: rem(16);
+        height: rem(30);
+        line-height: rem(40);
+      }
+    }
+  }
+  .content-panel-error {
+    height: rem(934);
+  }
+  .icon-info-title {
+    position: relative;
+    bottom: rem(10);
+    left: rem(5);
+  }
+  .content-panel {
+    max-height: rem(600);
+    padding: 0;
+    background: $body-bg;
+    border-radius: $border-radius;
+    .alphabet {
+      background-color: $solitude;
+      color: $black;
+      font-weight: 600;
+      padding: 0 rem(10);
+      line-height: rem(26);
+      margin-top: rem(5);
+    }
+  }
+
+  .actions-panel {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: rem(10);
+    button {
+      margin: rem(3);
+    }
+  }
+  .row {
+    margin: 0;
+  }
+  .form-group {
+    display: block;
+    margin-bottom: rem(15);
+  }
+  .c-text-filter {
+    position: relative;
+    top: rem(3);
+    width: 100%;
+    input {
+      width: 93%;
+      border-bottom: 0;
+    }
+    button {
+      padding: 0 !important;
+      .close-image {
+        padding: 0 !important;
+        height: 80%;
+        width: 80%;
+      }
+    }
+  }
+  .input-group {
+    align-items: center;
+    border-bottom: rem(1) solid $zircon;
+    height: rem(42);
+    input {
+      background-color: transparent;
+      border-radius: 0;
+      box-shadow: none;
+      &::placeholder {
+        color: $bright-grey;
+      }
+    }
+    &-append {
+      margin-right: rem(10);
+      .fa-search {
+        path {
+          fill: $bright-grey;
+        }
+      }
+    }
+  }
+  .form-group input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+  }
+
+  .form-group label {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .form-group label:before {
+    content: '';
+    top: -1px;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: rem(2) solid $bright-grey;
+    box-shadow: 0 rem(1) rem(2) rgba(0, 0, 0, 0.05),
+      inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: rem(6);
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: rem(5);
+    opacity: 0.5;
+  }
+  .form-group input:checked + label:before {
+    background-color: $pigment-green;
+    border-color: $pigment-green;
+    opacity: 1;
+  }
+  .form-group input:checked + label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: rem(3);
+    left: rem(6);
+    width: rem(5);
+    height: rem(12);
+    border: solid $white;
+    border-width: 0 rem(2) rem(2) 0;
+    transform: rotate(45deg);
+  }
+
+  label.radioLabel:before {
+    border-radius: 50%;
+  }
+  .accordion__heading {
+    background-color: $solitude;
+    color: $bright-grey;
+    font-size: rem(14);
+    font-weight: 500;
+    max-height: rem(680);
+    overflow-y: auto;
+  }
+  .accordion__button {
+    display: flex;
+    justify-content: space-between;
+    padding: rem(16) rem(20);
+    &:focus {
+      outline: none;
+    }
+  }
+  .flip {
+    transform: rotate(180deg);
+  }
+  .sl {
+    border-left: rem(1) solid $zircon;
+  }
+  .sr {
+    border-right: rem(1) solid $zircon;
+  }
+  .alphabetical-filter {
+    max-height: rem(490);
+    overflow-y: auto;
+    .any-order {
+      padding: 0 rem(15);
+    }
+    .accordion__button {
+      padding: rem(8) rem(15);
+    }
+    label {
+      margin: 0;
+      color: $bright-grey;
+      font-weight: 500;
+    }
+    .list-group-item {
+      padding: rem(8) rem(15);
+      .form-group {
+        margin: 0;
+      }
+    }
+  }
+  .top-info-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: rem(1) solid $zircon;
+    padding: rem(10) rem(15);
+    .selected-status {
+      color: $bright-grey;
+    }
+  }
+  .selected-filters {
+    max-height: rem(676);
+    overflow-y: auto;
+    .category {
+      padding: rem(8) rem(15);
+      background-color: $solitude;
+      color: $bright-grey;
+      font-size: rem(14);
+      font-weight: 500;
+    }
+    .sub-category {
+      padding: rem(8) rem(15);
+      display: flex;
+      justify-content: space-between;
+      button {
+        display: inline-flex;
+      }
+    }
+  }
+
+  .top {
+    border-bottom: rem(1) solid $zircon;
+    height: rem(720);
+    border-top: rem(1) solid $zircon;
+  }
+
+  .btn-apply {
+    float: right;
+    margin: rem(16);
+  }
+
+  .pointer {
+    background: none;
+    border: 0;
+    padding: 0;
+  }
+
+  .date-range {
+    display: flex;
+    align-items: center;
+    margin-left: rem(10);
+    margin-top: rem(10);
+    margin-bottom: rem(7);
+    form {
+      display: flex;
+      .form-control {
+        box-shadow: none;
+        border-radius: 0;
+        line-height: normal;
+        height: auto;
+        padding: 0;
+      }
+    }
+  }
+  .start-date,
+  .end-date {
+    flex: 1;
+    display: flex;
+    margin-left: rem(2);
+    input {
+      flex: 1;
+      max-width: rem(90);
+      width: rem(90);
+      margin-left: rem(5);
+      border: none;
+      border-bottom: rem(1) solid $grey-chateau;
+      color: $black;
+      padding: 0px 0 rem(2);
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .advanced-filters-header {
+    padding: rem(30) rem(25) rem(10);
+  }
+
+  .list-group-item {
+    font-weight: 500;
+    padding-left: 0;
+    border: 0 !important;
+    &:first-child {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    border: 0 !important;
+    span {
+      margin-left: rem(16);
+    }
+    span.child-item {
+      margin-left: rem(35);
+    }
+  }
+
+  .active {
+    background-color: $frosted-mint !important;
+    color: $bright-grey !important;
+    box-shadow: inset rem(2) 0px 0px $patina;
+    z-index: 0 !important;
+  }
+
+  .hide {
+    display: none;
+  }
+  .alpha-count {
+    font-weight: 100;
+    margin-left: rem(5);
+  }
+
+  .close-image {
+    padding-bottom: rem(15);
+  }
+  .clear-image {
+    margin-top: rem(3);
+  }
+
+  .clear-all {
+    opacity: 0.5;
+  }
+  .disabled {
+    cursor: not-allowed;
+  }
+
+  .colCheckbox {
+    max-height: 60%;
+  }
+
+  .colSelected {
+    max-height: 100%;
+  }
+
+  .c-loading-spinner {
+    position: absolute;
+  }
+}

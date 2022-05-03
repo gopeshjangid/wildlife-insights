@@ -1,0 +1,134 @@
+@import 'css/settings';
+
+$profile-picture-size: rem(45);
+
+.c-users-permissions-modal {
+  max-width: rem(675);
+
+  .content-panel {
+    padding: rem(22) rem(45);
+    background: $body-bg;
+    border-radius: $border-radius;
+    box-shadow: 0 8px 11px 0 rgba(0, 0, 0, 0.15);
+
+    .users-list {
+      max-height: rem(270);
+      overflow-y: auto;
+    }
+
+    .profile-picture {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      float: left;
+      width: $profile-picture-size;
+      height: $profile-picture-size;
+      border-radius: 100%;
+      margin-right: #{rem($grid-gutter-width) / 2};
+      background-size: cover;
+      background-position: center center;
+      background-color: $secondary;
+      font-size: $font-size-lg;
+      font-weight: $font-weight-bold;
+      color: $primary-alt;
+    }
+
+    .name {
+      font-size: $font-size-lg;
+      font-weight: $btn-font-weight;
+      color: $dark;
+    }
+
+    .email {
+      font-size: $font-size-sm;
+      font-style: italic;
+    }
+
+    .role {
+      div.c-form-select {
+        &__control {
+          height: $input-height-sm;
+          min-height: 0;
+        }
+
+        &__placeholder,
+        &__input,
+        &__menu-notice {
+          font-size: $font-size-base;
+        }
+
+        &__option {
+          font-size: $font-size-base;
+
+          &--is-focused {
+            background-color: rgba($primary, 0.3);
+          }
+
+          &--is-selected {
+            background: darken($primary, 20%);
+          }
+        }
+
+        &__value-container {
+          padding-top: 0;
+          padding-bottom: 0;
+
+          > div {
+            padding-top: 0;
+            padding-bottom: 0;
+          }
+        }
+
+        &__dropdown-indicator {
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    .email-input {
+      height: $input-height-sm;
+    }
+
+    .checkbox-tagger {
+      float: left;
+    }
+
+    .mrg-top-1 {
+      margin-top: rem(1);
+    }
+
+    .c-loading-spinner {
+      left: -6% !important;
+    }
+
+    .allow-tagger {
+      margin-left: rem(23);
+    }
+
+    .checkbox-note {
+      margin-left: rem(23);
+      font-size: rem(12);
+    }
+
+    .invite-role {
+      .c-form-select__menu {
+        width: rem(350);
+        span.description {
+          font-size: rem(11);
+        }
+      }
+    }
+
+    .implicit-note {
+      display: block;
+      padding-left: #{$profile-picture-size + rem($grid-gutter-width) / 2};
+    }
+  }
+
+  .actions-panel {
+    display: flex;
+    justify-content: space-between;
+    padding-top: $margin-size;
+  }
+}

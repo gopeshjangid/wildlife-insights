@@ -1,0 +1,10 @@
+query getDataFile(
+  $projectId: Int!
+  $deploymentId: Int!
+  $id: ID!
+) {
+  getDataFile(projectId: $projectId, deploymentId: $deploymentId, id: $id) {
+    id
+    hasBoundingBox
+  }
+}

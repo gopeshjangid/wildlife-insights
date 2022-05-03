@@ -1,0 +1,26 @@
+mutation createProject($organizationId: Int!, $body: ProjectCreate!) {
+  createProject(organizationId: $organizationId, body: $body) {
+    id
+    name
+    shortName
+    startDate
+    endDate
+    metadataLicense
+    dataFilesLicense
+    objectives
+    projectUrl
+    projectCreditLine
+    embargo
+    acknowledgements
+    deleteDataFilesWithIdentifiedHumans
+    initiatives {
+      id
+      name
+    }
+    organization {
+      id
+      name
+    }
+    projectType
+  }
+}

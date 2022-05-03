@@ -1,0 +1,14 @@
+query getSubProjects($name: String) {
+  getSubProjects(
+    filters: { name: $name }
+    pagination: {
+      pageSize: 50
+      sort: { column: "name", order: "ASC" }
+    }
+  ) {
+    data {
+      id
+      name
+    }
+  }
+}

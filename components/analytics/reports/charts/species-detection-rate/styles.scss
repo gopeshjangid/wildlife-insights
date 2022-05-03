@@ -1,0 +1,17 @@
+.c-linechart-axis-x-tick {
+  &__label {
+    fill: #000000;
+    font-size: rem(15);
+    stroke-width: 0.8;
+    font-weight: 200;
+  }
+}
+
+.chart-container {
+  max-width: rem(1500);
+  max-height: rem(600);
+}
+
+.tooltipTextMean {
+  color: green
+}

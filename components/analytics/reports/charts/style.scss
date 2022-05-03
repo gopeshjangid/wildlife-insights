@@ -1,0 +1,11 @@
+.d3-tooltip {
+  background: #f8f9fa;
+  color: black;
+  min-width: rem(30);
+  padding: rem(2) rem(5);
+  box-shadow: rem(-7) rem(8) rem(5) rem(-1) rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: rem(-7) rem(8) rem(5) rem(-1) rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: rem(-7) rem(8) rem(5) rem(-1) rgba(0, 0, 0, 0.19);
+  z-index: 9999;
+  border-radius: rem(3);
+}

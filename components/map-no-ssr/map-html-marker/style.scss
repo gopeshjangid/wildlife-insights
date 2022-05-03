@@ -1,0 +1,36 @@
+@import 'css/settings';
+
+.c-map-html-marker {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $primary-alt;
+  border: 3px solid $white;
+  border-radius: 100%;
+  box-shadow: $box-shadow-sm;
+  color: $white;
+  font-size: $font-size-sm;
+  transform: translate(-50%, -50%);
+
+  &:hover {
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  &.-discover {
+    border: 1px solid $white;
+  }
+
+  &.-active {
+    box-shadow: 0 0 0 rem(7) $primary;
+    z-index: 1;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: circle(closest-side);
+  }
+}

@@ -1,0 +1,6 @@
+mutation highlightDataFileList($body: DataFileHighlightBulk!) {
+  highlightDataFileList(body: $body) {
+    id
+    highlighted
+  }
+}

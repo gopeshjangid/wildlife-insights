@@ -1,0 +1,5 @@
+mutation updateDevice($organizationId: Int!, $id: ID!, $body: DeviceUpdate!) {
+  updateDevice(organizationId: $organizationId, id: $id, body: $body) {
+    id
+  }
+}

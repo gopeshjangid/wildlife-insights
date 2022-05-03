@@ -1,0 +1,21 @@
+query getPublicDownloads(
+  $pageSize: Int
+  $pageNumber: Int
+  $sort: [Sort]
+) {
+  getPublicDownloads(
+    pagination: { pageSize: $pageSize, pageNumber: $pageNumber, sort: $sort }
+  ) {
+    data {
+      id
+      requestedTimestamp
+      projectShortName
+      intendedUseOfData
+      expectedProducts
+      email
+    }
+    meta {
+      totalPages
+    }
+  }
+}

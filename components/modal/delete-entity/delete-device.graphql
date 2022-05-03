@@ -1,0 +1,5 @@
+mutation deleteDevice($organizationId: Int!, $id: ID!) {
+  deleteDevice(organizationId:$organizationId, id:$id) {
+    id
+  }
+}

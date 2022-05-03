@@ -1,0 +1,21 @@
+query getProject($projectId: ID!) {
+  getProjectPublic(projectId: $projectId) {
+    name
+    organization {
+      name
+    }
+    shortName
+    projectUrl
+    dataCitationARK
+    objectives
+    metadataLicense
+    dataFilesLicense
+    startDate
+    endDate
+    acknowledgements
+    metadata
+    embargo
+    sensitiveSpecies
+    embargoDate
+  }
+}

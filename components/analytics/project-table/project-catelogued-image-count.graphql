@@ -1,0 +1,17 @@
+query getDataFiles(
+  $projectId: Int!
+  $pageSize: Int
+  $pageNumber: Int
+  $sort: [Sort]
+  $filters: DataFileFilters
+) {
+  getDataFilesForProject(
+    projectId: $projectId
+    pagination: { pageSize: $pageSize, pageNumber: $pageNumber, sort: $sort }
+    filters: $filters
+  ) {
+    dataFileMeta {
+      dataFileCount
+    }
+  }
+}

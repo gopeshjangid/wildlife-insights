@@ -1,0 +1,9 @@
+query getInitiative($initiativeId: ID!) {
+  getInitiative(initiativeId: $initiativeId) {
+    id
+    ownerOrganization {
+      id
+      name
+    }
+  }
+}

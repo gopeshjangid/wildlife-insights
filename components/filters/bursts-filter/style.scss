@@ -1,0 +1,40 @@
+@import 'css/settings';
+
+.c-bursts-filter {
+  box-shadow: $box-shadow-sm;
+  border-radius: $border-radius-sm;
+
+  .input-group-text {
+    height: rem(26);
+    padding-top: 0;
+    padding-bottom: 0;
+    box-shadow: none;
+  }
+
+  .input-group-prepend {
+    .input-group-text {
+      padding-right: map-get($spacers, 1);
+    }
+  }
+
+  .input-group-append {
+    .input-group-text {
+      padding-left: map-get($spacers, 1);
+    }
+  }
+
+  input {
+    height: rem(26);
+    padding: 0 map-get($spacers, 1);
+    box-shadow: none;
+    &:disabled {
+      text-align: center;
+      -moz-appearance: textfield;
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+  }
+}

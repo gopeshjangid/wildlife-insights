@@ -1,0 +1,9 @@
+query getDeployment($projectId: Int!, $id: ID!) {
+  getDeployment(projectId: $projectId, id: $id) {
+    id
+    deploymentName
+    project {
+      shortName
+    }
+  }
+}

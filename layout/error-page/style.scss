@@ -1,0 +1,19 @@
+@import 'css/settings';
+
+.l-error-page {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+}
+
+.l-error-page-content {
+  text-align: center;
+
+  padding-top: $margin-size;
+  padding-bottom: $margin-size + $header-size;
+
+  @media screen and (min-width: map-get($grid-breakpoints, 'sm')) {
+    padding-bottom: $margin-size;
+  }
+}

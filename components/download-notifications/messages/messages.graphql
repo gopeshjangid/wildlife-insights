@@ -1,0 +1,25 @@
+query getMessages(
+  $pageSize: Int
+  $pageNumber: Int
+) {
+  getMessages(
+    pagination: { pageSize: $pageSize, pageNumber: $pageNumber }
+  ) {
+    data {
+      projectId,
+      emailSubject,
+      emailMessage,
+      requestedTimestamp,
+      status
+      participant {
+          email
+      }
+    }
+    meta {
+      totalItems
+      totalPages
+      size
+      page
+    }
+  }
+}

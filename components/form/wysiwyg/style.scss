@@ -1,0 +1,31 @@
+@import 'css/settings';
+
+.c-form-wysiwyg {
+  &.-disabled {
+    .ql-toolbar.ql-snow {
+      background: $input-disabled-bg;
+    }
+
+    .ql-container.ql-snow {
+      background: $input-disabled-bg;
+    }
+  }
+
+  .ql-toolbar.ql-snow {
+    background: $white;
+    border: $input-border-width solid $input-border-color;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    box-shadow: $input-box-shadow;
+  }
+
+  .ql-container.ql-snow {
+    color: $input-color;
+    font-size: $font-size-base;
+    background: $white;
+    border: $input-border-width solid $input-border-color;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+    box-shadow: $input-box-shadow;
+  }
+}

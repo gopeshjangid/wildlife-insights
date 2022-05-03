@@ -1,0 +1,10 @@
+@import 'css/settings';
+
+.c-restricted-access-icon {
+  display: inline-block;
+  margin-left: map-get($spacers, 2);
+
+  .icon path {
+    fill: $dark;
+  }
+}

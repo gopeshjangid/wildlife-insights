@@ -1,0 +1,33 @@
+@import 'css/settings';
+
+.c-nav-user-tooltip {
+  min-width: rem(150);
+  text-align: left;
+
+  .nav-link {
+    color: $body-color;
+
+    &:hover {
+      color: $dark;
+    }
+
+    .custom-radio {
+      padding-left: 0;
+      padding-right: map-get($spacers, 4);
+
+      input:checked ~ label {
+        color: $dark;
+      }
+
+      label {
+        display: block;
+
+        &:before,
+        &:after {
+          left: auto;
+          right: #{-1 * map-get($spacers, 4)};
+        }
+      }
+    }
+  }
+}

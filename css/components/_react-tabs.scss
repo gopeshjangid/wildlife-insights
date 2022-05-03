@@ -1,0 +1,74 @@
+.react-tabs {
+  > .tabs-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: rem(30);
+  }
+
+  .react-tabs__tab-list {
+    display: flex;
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    > .react-tabs__tab {
+      position: relative;
+      margin-right: $ui-space;
+      color: $grey;
+      will-change: color;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $dark;
+        cursor: pointer;
+      }
+
+      &:after {
+        left: 0;
+        position: absolute;
+        content: '';
+        display: block;
+        height: 4px;
+        width: 100%;
+        background: transparent;
+        border-radius: 2px;
+      }
+
+      &.react-tabs__tab--disabled {
+        color: rgba($grey, 0.5);
+      }
+
+      &.react-tabs__tab--selected {
+        color: $dark;
+
+        &::after {
+          background-color: $primary;
+          box-shadow: $box-shadow-borders;
+        }
+      }
+    }
+  }
+
+  &.manage-tab-nav {
+    > .tabs-container {
+      position: relative; // Needed for the photos badge
+      margin-top: $margin-size;
+    }
+
+    .react-tabs__tab {
+      font-size: rem(22);
+      font-weight: 300;
+      margin-right: $margin-size;
+
+      .c-identify-photos-badge {
+        position: absolute;
+        top: calc(50% - #{map-get($spacers, 2)});
+        right: #{-1 * map-get($spacers, 1)};
+        transform: translate(100%, -50%);
+        font-size: $font-size-base;
+      }
+    }
+  }
+}

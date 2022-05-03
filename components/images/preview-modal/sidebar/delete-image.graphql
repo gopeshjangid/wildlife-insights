@@ -1,0 +1,5 @@
+mutation deleteDataFile($projectId: Int!, $id: ID!) {
+  deleteDataFile(projectId: $projectId, id: $id) {
+    id
+  }
+}

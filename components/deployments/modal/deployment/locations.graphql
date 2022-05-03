@@ -1,0 +1,11 @@
+query getLocations($projectId: Int!) {
+  getLocations(
+    projectId: $projectId
+    pagination: { pageSize: 999, sort: [{ column: "placename", order: "ASC" }] }
+  ) {
+    data {
+      id
+      placename
+    }
+  }
+}

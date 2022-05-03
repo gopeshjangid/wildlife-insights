@@ -1,0 +1,57 @@
+@import 'css/settings';
+
+.c-deployment-modal {
+  max-width: rem(560);
+  
+  .content-panel {
+    padding: rem(22) rem(45);
+    background: $body-bg;
+    border-radius: $border-radius;
+    box-shadow: 0 rem(8) rem(11) 0 rgba(0, 0, 0, 0.15);
+    h2 {
+      color: #3b9a5c; //$primary-alt;
+    }
+    a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    .filename {
+      position: relative;
+      margin-left: rem(10);
+      top: rem(8);
+      color: $black;
+      font-weight: 500;
+    }
+    .dropzone-panel {
+      position: relative;
+      border: solid rem(1);
+      width: rem(100);
+      vertical-align: middle;
+      line-height: rem(33);
+      text-align: center;
+      cursor: pointer;
+
+      box-shadow: 0px rem(5) rem(17) rem(-5) #a89e9e;
+      color: #2e7a4e;
+      font-weight: 500;
+      border: solid rem(1) #e9ecef;
+    }
+  }
+
+  .actions-panel {
+    display: flex;
+    justify-content: space-between;
+    padding-top: $margin-size;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
+  .upload-inline-action-button {
+    padding-left: $ui-space;
+    padding-right: $ui-space;
+    width: 100%;
+  }
+}

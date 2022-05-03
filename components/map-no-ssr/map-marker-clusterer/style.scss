@@ -1,0 +1,32 @@
+@import 'css/settings';
+
+.cluster {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $primary-alt;
+  border: 3px solid $white;
+  border-radius: 100%;
+  box-shadow: $box-shadow-sm;
+
+  &:empty {
+    display: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  > div {
+    position: static !important;
+    color: $white !important;
+    font-size: $font-size-sm !important;
+    font-family: inherit !important;
+    font-weight: $font-weight-normal !important;
+    line-height: inherit !important;
+  }
+
+  img {
+    display: none;
+  }
+}

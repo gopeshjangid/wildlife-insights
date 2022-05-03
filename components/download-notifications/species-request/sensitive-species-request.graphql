@@ -1,0 +1,31 @@
+query getSensitiveSpeciesAprrovalRequest(
+  $pageSize: Int
+  $pageNumber: Int
+) {
+  getSensitiveSpeciesAprrovalRequest(
+    pagination: { pageSize: $pageSize, pageNumber: $pageNumber }
+  ) {
+    sensitiveSpeciesAccessNotificationData {
+      id
+      projectId
+      requestApprovalMessage
+      requestedTimestamp
+      status
+      participantId
+      participant {
+        firstName
+        lastName
+        email
+      }
+      project {
+        shortName
+      }
+    }
+    meta {
+      totalItems
+      totalPages
+      size
+      page
+    }
+  }
+}

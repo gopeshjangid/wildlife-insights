@@ -1,0 +1,15 @@
+query getSubProjects(
+  $projectId: Int!
+  $filters: SubProjectFilters
+) {
+  getSubProjectsByProject(
+    projectId: $projectId
+    pagination: { pageSize: 999, sort: [{ column: "name", order: "ASC" }] }
+    filters: $filters
+  ) {
+    data {
+      id
+      name
+    }
+  }
+}

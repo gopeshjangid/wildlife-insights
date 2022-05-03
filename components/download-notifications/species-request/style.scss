@@ -1,0 +1,99 @@
+@import 'css/settings';
+
+.c-download-species-request {
+  .heading {
+    color: $shark;
+    font-size: rem(24);
+    font-weight: 700;
+  }
+
+  li {
+    background-color: $white !important;
+  }
+
+  .sub-heading {
+    color: $shark;
+    font-size: rem(14);
+    font-weight: 400;
+  }
+
+  .right-arrow {
+    position: relative;
+    left: 100.5%;
+    top: rem(106);
+  }
+
+  .left-arrow {
+    position: relative;
+    top: rem(106);
+    right: 2.8%;
+  }
+
+  .action-panel {
+    margin-top: rem(20);
+  }
+
+  .message-box {
+    text-align: left;
+    width: 33%;
+    border: solid rem(1) $speech-green;
+    border-radius: rem(8);
+    height: rem(204);
+    padding: rem(24);
+    color: $shuttle-grey;
+    overflow-y: auto;
+    .date {
+      margin-bottom: rem(5);
+    }
+    .btn-approve {
+      background-color: $primary-alt;
+      border-radius: rem(5);
+      cursor: pointer;
+      margin-right: rem(23);
+      color: $white;
+      font-weight: 400;
+      &:disabled {
+        cursor: not-allowed;
+      }
+    }
+    .btn-deny {
+      color: $primary-alt;
+      &:active, &:focus {
+        box-shadow: none;
+      }
+      &:disabled {
+        cursor: not-allowed;
+      }
+    }
+    .mrg-top-2 {
+      margin-top: rem(2);
+    }
+    .project {
+      color: $shark;
+      font-size: rem(14);
+      font-weight: 500;
+      margin-bottom: rem(5);
+    }
+  }
+
+  .message-box:not(:nth-child(1)) {
+    margin-left: 8px;
+  }
+
+  .empty {
+    width: 100%;
+    text-align: center;
+    line-height: rem(190);
+    padding: 0;
+    margin: 0;
+  }
+
+  .error {
+    color: $danger;
+  }
+
+  .disable-cards {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}

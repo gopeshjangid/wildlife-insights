@@ -1,0 +1,15 @@
+@import 'css/settings';
+
+.c-linechart-axis-x-tick {
+  &__label {
+    fill: #000000;
+    font-size: rem(15);
+    stroke-width: 0.8;
+    font-weight: 200;
+  }
+}
+
+.chart-container {
+  max-width: rem(900);
+  max-height: rem(600);
+}

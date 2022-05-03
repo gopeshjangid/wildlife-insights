@@ -1,0 +1,13 @@
+.svg-inline--fa {
+  path {
+    fill: $primary-alt;
+  }
+}
+
+.btn-primary {
+  .svg-inline--fa {
+    path {
+      fill: $dark;
+    }
+  }
+}

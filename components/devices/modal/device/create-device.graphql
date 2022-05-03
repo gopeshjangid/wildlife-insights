@@ -1,0 +1,5 @@
+mutation createDevice($organizationId: Int!, $projectId: Int, $body: DeviceCreate!) {
+  createDevice(organizationId: $organizationId, projectId: $projectId, body: $body) {
+    id
+  }
+}

@@ -1,0 +1,7 @@
+mutation updateDataFileTime($projectId: Int!, $deploymentId: Int!, $id: ID!, $body: DataFileTimeUpdate!) {
+  updateDataFileTime(projectId: $projectId, deploymentId: $deploymentId, id: $id, body: $body) {
+    id
+    timestamp
+  }
+}
+

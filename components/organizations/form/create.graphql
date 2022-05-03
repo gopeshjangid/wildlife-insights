@@ -1,0 +1,15 @@
+mutation createOrganization($body: OrganizationCreate!) {
+  createOrganization(body: $body) {
+    id
+    name
+    streetAddress
+    city
+    state
+    postalCode
+    phone
+    email
+    countryCode
+    organizationUrl
+    remarks
+  }
+}

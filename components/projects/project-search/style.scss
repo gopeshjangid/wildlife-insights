@@ -1,0 +1,49 @@
+@import "css/settings";
+
+.c-project-search {
+  position: relative;
+  margin-top: rem(10);
+
+  > .search-icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    svg > path {
+      fill: $primary;
+    }
+  }
+
+  .c-loading-spinner {
+    // The search icon is to the right of the loading spinner
+    // so we increase it's distance from the right
+    right: rem(20);
+  }
+
+  input {
+    // In addition to the loading spinner, the search icon
+    // is also positionned on top of the input
+    // We let enough space so the text doesn't overlap them
+    padding-right: rem(45);
+  }
+
+  .search-input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid $border-color;
+    border-radius: 0;
+    box-shadow: none;
+    z-index: -1;
+
+    &:focus {
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    input {
+      padding-right: rem(20);
+      width: 100%;
+    }
+  }
+}

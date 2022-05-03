@@ -1,0 +1,47 @@
+@import 'css/settings';
+
+.c-download-data-list {
+  .table {
+    font-size: rem(14);
+    border: 0;
+
+    // Increase the specificity to replace the default
+    // styles
+    .rt-thead.-header {
+      box-shadow: none;
+
+      .rt-th {
+        text-align: left;
+        font-weight: $font-weight-bold;
+        border-right: 0;
+
+        &.-sort-asc {
+          div:first-child:after {
+            content: $sort-arrow-up;
+            margin-left: $sort-arrow-left-space;
+          }
+          box-shadow: none;
+        }
+
+        &.-sort-desc {
+          div:first-child:after {
+            content: $sort-arrow-down;
+            margin-left: $sort-arrow-left-space;
+          }
+          box-shadow: none;
+        }
+      }
+      .-cursor-pointer {
+        div:first-child:after {
+          content: $sort-arrow-default;
+          margin-left: $sort-arrow-left-space;
+        }
+      }
+    }
+
+    .rt-td {
+      // display: flex;
+      align-items: center;
+    }
+  }
+}

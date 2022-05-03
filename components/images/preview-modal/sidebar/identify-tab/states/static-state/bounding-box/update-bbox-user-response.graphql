@@ -1,0 +1,6 @@
+mutation updateDataFile($projectId: Int!, $id: ID!, $body: DataFileUpdate!) {
+  updateDataFile(projectId: $projectId, id: $id, body: $body) {
+    id
+    hasBoundingBox
+  }
+}

@@ -1,0 +1,69 @@
+@import 'css/settings';
+
+div.c-image-gallery-modal.ReactModal__Content {
+  width: calc(100vw - #{2 * $out-space});
+  height: calc(100vh - #{2 * map-get($spacers, 5)});
+  padding: 0;
+  background: $bg-color-primary;
+
+  > .custom-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    > .close-button {
+      position: absolute;
+      top: #{-1 * map-get($spacers, 2)};
+      right: 0;
+      height: rem(35);
+      width: rem(35);
+      padding: 0;
+      border-radius: 100%;
+      transform: translateY(-100%);
+
+      .svg-inline--fa {
+        path {
+          fill: $body-color;
+        }
+      }
+    }
+
+    > .previous-button,
+    > .next-button {
+      position: absolute;
+      top: 50%;
+      height: rem(35);
+      width: rem(35);
+      padding: 0;
+      border: 0;
+      border-radius: 100%;
+      background: none;
+      font-size: $font-size-lg;
+
+      .svg-inline--fa {
+        path {
+          fill: $white;
+        }
+      }
+    }
+
+    > .previous-button {
+      left: #{-1 * map-get($spacers, 2)};
+      transform: translate(-100%, -50%);
+    }
+
+    > .next-button {
+      right: #{-1 * map-get($spacers, 2)};
+      transform: translate(100%, -50%);
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+}

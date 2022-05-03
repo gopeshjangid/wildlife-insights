@@ -1,0 +1,33 @@
+mutation updateProject(
+  $organizationId: Int!
+  $projectId: ID!
+  $body: ProjectUpdate!
+) {
+  updateProject(
+    organizationId: $organizationId
+    projectId: $projectId
+    body: $body
+  ) {
+    id
+    name
+    shortName
+    startDate
+    endDate
+    metadataLicense
+    dataFilesLicense
+    objectives
+    projectUrl
+    projectCreditLine
+    embargo
+    embargoDate
+    acknowledgements
+    deleteDataFilesWithIdentifiedHumans
+    organizationId
+    initiatives {
+      id
+      name
+    }
+    projectType
+    metadata
+  }
+}

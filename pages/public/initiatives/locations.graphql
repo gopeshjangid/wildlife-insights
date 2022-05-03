@@ -1,0 +1,14 @@
+query getLocationsPublic($organizationId: Int, $initiativeId: Int, $projectId: Int) {
+  getLocationsPublic(
+    organizationId: $organizationId,
+    initiativeId: $initiativeId,
+    projectId: $projectId,
+    pagination: { pageSize: 999 }
+  ) {
+    data {
+      id
+      latitude
+      longitude
+    }
+  }
+}

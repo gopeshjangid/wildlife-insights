@@ -1,0 +1,12 @@
+query getProjects {
+  getProjects(pagination: { pageSize: 999 }) {
+    data {
+      id
+      name
+      organization {
+        id
+        name
+      }
+    }
+  }
+}

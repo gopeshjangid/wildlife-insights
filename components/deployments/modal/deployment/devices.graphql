@@ -1,0 +1,17 @@
+query getDevices(
+  $organizationId: Int!,
+  $projectId: Int,
+  $filters: DeviceFilters
+) {
+  getDevices(
+    organizationId: $organizationId
+    projectId: $projectId
+    pagination: { pageSize: 999, sort: [{ column: "name", order: "ASC" }] }
+    filters: $filters
+  ) {
+    data {
+      id
+      name
+    }
+  }
+}

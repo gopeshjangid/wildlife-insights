@@ -1,0 +1,22 @@
+query($organizationId: Int, $projectId: Int, $initiativeId: Int) {
+  getLocations(
+    organizationId: $organizationId
+    projectId: $projectId
+    initiativeId: $initiativeId
+    pagination: { pageSize: 10000 }
+  ) {
+    data {
+      id
+      latitude
+      longitude
+      placename
+      project {
+        shortName
+        initiatives {
+          name
+        }
+        metadata
+      }
+    }
+  }
+}

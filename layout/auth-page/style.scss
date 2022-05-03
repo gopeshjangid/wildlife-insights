@@ -1,0 +1,41 @@
+@import 'css/settings';
+
+.l-auth-page {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+
+  > .auth-page-content {
+    margin-top: #{$margin-size + rem(100)};
+    margin-bottom: $margin-size;
+
+    .auth-page-form {
+      background-color: white;
+      border-radius: $border-radius;
+      box-shadow: $box-shadow;
+      margin-left: auto;
+      margin-bottom: $margin-size;
+      margin-right: auto;
+      margin-top: $margin-size;
+      padding: $margin-size $ui-space;
+
+      @media screen and (min-width: map-get($grid-breakpoints, 'sm')) {
+        padding: $margin-size;
+      }
+
+      .intro {
+        font-size: rem(14);
+      }
+    }
+
+    .more-actions {
+      margin-top: 45px;
+      text-align: center;
+
+      a {
+        font-weight: bold;
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-display: swap;
+
+  &.-modal-is-open {
+    overflow: visible;
+  }
+}
+
+h2 {
+  margin-bottom: $ui-space;
+}
+
+p {
+  > a {
+    text-decoration: underline;
+  }
+
+  > a.btn {
+    text-decoration: none;
+  }
+}
+
+div#nprogress {
+  .bar {
+    background: $primary;
+  }
+
+  .peg {
+    box-shadow: $box-shadow;
+  }
+
+  .spinner {
+    display: none;
+  }
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-baseline {
+  align-items: baseline;
+}
+
+ul.dash-ul {
+  list-style-type: none;
+  padding-left: rem(20);
+  li {
+    margin-bottom: rem(2);
+    &:before {
+      content: "–";
+      position: absolute;
+      margin-left: rem(-12);
+    }
+  }
+}
+
+ul.no-style {
+  list-style-type: none;
+  padding-left: rem(17);
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+.cursor-default {
+  cursor: default !important;
+}
+
+.btn-raw {
+  background: none;
+  border: 0;
+  padding: 0;
+}

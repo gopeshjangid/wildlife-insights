@@ -1,0 +1,7 @@
+@import 'css/settings';
+
+.signup-recaptcha-error {
+    iframe {
+        border: solid rem(1) $danger;
+    }
+}

@@ -1,0 +1,12 @@
+query getLocation($projectId: Int!, $id: ID!) {
+  getLocation(projectId: $projectId, id: $id) {
+    id
+    placename
+    country    
+    latitude
+    longitude
+    latitudeStr
+    longitudeStr
+    remarks
+  }
+}

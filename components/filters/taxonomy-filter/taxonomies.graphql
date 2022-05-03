@@ -1,0 +1,27 @@
+query getTaxonomies(
+  $search: String,
+  $sort: [Sort],
+  $entityType: String,
+  $entityId: Int,
+  $isSequence: Boolean,
+  $identifiedByExpertFlag: Boolean
+) {
+  getTaxonomies(
+    isSequence: $isSequence,
+    filters: {
+      search: $search,
+      searchNamesBy: scientificAndCommonName,
+      entityType: $entityType,
+      entityId: $entityId,
+      identifiedByExpertFlag: $identifiedByExpertFlag
+    }
+    pagination: { pageSize: 50, sort: $sort }
+  ) {
+    data {
+      id
+      scientificName
+      commonNameEnglish
+      uniqueIdentifier
+    }
+  }
+}

@@ -1,0 +1,17 @@
+mutation updateSensitiveSpeciesAccessNotification(
+  $accessNotificationId: ID!,
+  $status: String!
+) {
+  updateSensitiveSpeciesAccessNotification(
+    accessNotificationId: $accessNotificationId,
+    updateSensitiveSpeciesAccessNotificationRequest: { status: $status }
+  ) {
+    id
+    projectId
+    requestApprovalMessage
+    status
+    requestedTimestamp
+    approvalTimestamp
+    participantId
+  }
+}

@@ -1,0 +1,29 @@
+@import "css/settings";
+
+.c-grid-size-control {
+  .btn-icon {
+    padding: rem(3);
+    border-radius: unset;
+    font-weight: normal;
+    color: $grey;
+    display: inline-flex;
+    &:focus {
+      box-shadow: none;
+    }
+    &:hover {
+      .svg-inline--fa path {
+        fill: $primary-alt;
+      }
+    }
+    .svg-inline--fa path {
+      fill: $grey;
+    }
+  }
+
+  .active-selection {
+    background-color: #d0f1d7;
+    .svg-inline--fa path {
+      fill: $primary-alt;
+    }
+  }
+}

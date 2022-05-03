@@ -1,0 +1,13 @@
+query getProject($organizationId: Int!, $projectId: ID!) {
+  getProject(organizationId: $organizationId, projectId: $projectId) {
+    id
+    organization {
+      id
+      name
+    }
+    initiatives {
+      id
+      name
+    }
+  }
+}

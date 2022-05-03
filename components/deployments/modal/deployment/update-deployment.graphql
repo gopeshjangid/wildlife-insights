@@ -1,0 +1,9 @@
+mutation updateDeployment(
+  $projectId: Int!
+  $id: ID!
+  $body: DeploymentUpdate!
+) {
+  updateDeployment(projectId: $projectId, id: $id, body: $body) {
+    id
+  }
+}

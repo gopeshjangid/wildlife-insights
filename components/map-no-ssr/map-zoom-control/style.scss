@@ -1,0 +1,67 @@
+@import "css/settings";
+
+.c-map-zoom-control {
+  .control-style {
+    display: block;
+    width: rem(30);
+    height: rem(30);
+    border: 0;
+    color: $white;
+    background: rgba($black, 0.3);
+    line-height: rem(25);
+    transition: background 0.2s ease-out;
+
+    &:hover:not([disabled]),
+    &:focus:not([disabled]) {
+      background: rgba($black, 0.5);
+    }
+
+    &:focus:not([disabled]) {
+      box-shadow: 0 0 0 rem(2) $primary;
+      outline: none;
+    }
+
+    &[disabled] {
+      opacity: 0.3;
+    }
+
+    path {
+      fill: currentColor;
+    }
+  }
+
+  .zoom-in {
+    margin-bottom: rem(1);
+    border-top-left-radius: rem(4);
+    border-top-right-radius: rem(4);
+  }
+
+  .zoom-out {
+    border-bottom-left-radius: rem(4);
+    border-bottom-right-radius: rem(4);
+  }
+
+  .img-toggle-control {
+    padding: rem(0);
+    border-radius: rem(4);
+    img {
+      width: rem(30);
+    }
+
+    &-active {
+      background: rgba($white, 0.6);
+      &:hover:not([disabled]),
+      &:focus:not([disabled]) {
+        background: rgba($white, 0.9);
+      }
+    }
+
+    &-inactive {
+      background: rgba($black, 0.2);
+      &:hover:not([disabled]),
+      &:focus:not([disabled]) {
+        background: rgba($black, 0.4);
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+query getDeployment($projectId: Int!, $id: ID!) {
+  getDeployment(projectId: $projectId, id: $id) {
+    id
+    project {
+      id
+      name
+      shortName
+      organization {
+        id
+        name
+      }
+    }
+    location {
+      id
+      placename
+      latitude
+      longitude
+    }
+    device {
+      id
+      name
+      model
+    }
+  }
+}

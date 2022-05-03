@@ -1,0 +1,5 @@
+mutation createSensitiveSpeciesAccessNotification($sensitiveSpeciesAccessNotificationCreateRequest: SensitiveSpeciesAccessNotificationCreateRequest) {
+  createSensitiveSpeciesAccessNotification(sensitiveSpeciesAccessNotificationCreateRequest: $sensitiveSpeciesAccessNotificationCreateRequest) {
+    projectId
+  }
+}

@@ -1,0 +1,7 @@
+query getHighlightedPhotos($projectId: Int) {
+  getProjectHighlightedPhotos(projectId: $projectId) {
+    highlightedPhotos {
+      thumbnailUrl
+    }
+  }
+}

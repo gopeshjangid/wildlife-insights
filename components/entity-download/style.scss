@@ -1,0 +1,21 @@
+@import "css/settings";
+
+.c-download-tooltip {
+  min-width: rem(280);
+  min-height: rem(25);
+  text-align: left;
+
+  .spinner {
+    text-align: center;
+  }
+
+  .font-weight-bold {
+    font-size: $h6-font-size;
+    font-weight: $font-weight-normal;
+    color: $dark;
+  }
+
+  .italic {
+    font-style: italic;
+  }
+}

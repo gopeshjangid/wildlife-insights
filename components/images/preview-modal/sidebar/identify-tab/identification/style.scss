@@ -1,0 +1,116 @@
+@import "css/settings";
+
+.c-identification {
+  position: relative; // Needed for the button to expand/collapse
+  padding: #{$grid-gutter-width / 2} #{$grid-gutter-width / 2} $grid-gutter-width;
+  border-radius: rem(10);
+  border: 1px solid rgba(darken($primary, 40%), 0.2);
+  box-shadow: 0 rem(1) rem(3) rem(1) rgba(darken($primary, 20%), 0.1);
+  margin-bottom: rem(13);
+
+  &.with-id-label {
+    padding-right: rem(10);
+    padding-left: rem(25);
+  }
+
+  .id-label-holder {
+    position: absolute;
+    left: rem(0);
+  }
+
+  &:last-child {
+    margin-bottom: rem(5);
+  }
+
+  .form-group {
+    margin-bottom: map-get($spacers, 2);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .label,
+  label {
+    margin-left: 0 !important;
+    color: $primary-alt !important;
+    font-size: rem(14) !important;
+    font-weight: $font-weight-bold;
+    text-align: right;
+    letter-spacing: initial !important;
+    text-transform: none !important;
+  }
+
+  .faded {
+    opacity: 0.4;
+  }
+
+  .separator {
+    margin-bottom: map-get($spacers, 2);
+    border-bottom: rem(1) solid rgba(darken($primary, 40%), 0.2);
+  }
+
+  // Give the select input the same height
+  // as the other inputs
+  div.c-form-select {
+    &__control {
+      height: $input-height-sm;
+      min-height: 0;
+    }
+
+    &__placeholder,
+    &__input,
+    &__menu-notice {
+      font-size: rem(14);
+    }
+
+    &__menu {
+      &-list {
+        max-height: rem(200);
+        overflow-y: auto;
+      }
+
+      .menu-header {
+        padding: 0 rem(12);
+        font-size: rem(12);
+        font-style: italic;
+      }
+    }
+
+    &__option {
+      font-size: rem(14);
+
+      &--is-focused {
+        background-color: rgba($primary, 0.3);
+      }
+
+      &--is-selected {
+        background: darken($primary, 20%);
+      }
+    }
+
+    &__value-container {
+      padding-top: 0;
+      padding-bottom: 0;
+
+      > div {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+
+    &__dropdown-indicator {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  .btn.btn-expand {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    height: rem(30);
+    width: rem(30);
+    border-radius: 100%;
+  }
+}

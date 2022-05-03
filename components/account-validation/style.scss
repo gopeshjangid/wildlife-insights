@@ -1,0 +1,33 @@
+@import 'css/settings';
+
+$profile-picture-size: rem(45);
+
+.c-account-validation {
+  .profile-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    width: $profile-picture-size;
+    height: $profile-picture-size;
+    border-radius: 100%;
+    margin-right: #{rem($grid-gutter-width) / 2};
+    background-size: cover;
+    background-position: center center;
+    background-color: $secondary;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    color: $primary-alt;
+  }
+
+  .name {
+    font-size: $font-size-lg;
+    font-weight: $btn-font-weight;
+    color: $dark;
+  }
+
+  .email {
+    font-size: $font-size-sm;
+    font-style: italic;
+  }
+}

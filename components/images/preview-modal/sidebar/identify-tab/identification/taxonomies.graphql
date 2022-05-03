@@ -1,0 +1,19 @@
+query getTaxonomies($search: String) {
+  getTaxonomies(
+    filters: { search: $search, searchNamesBy: scientificAndCommonName }
+    pagination: { pageSize: 1000 }
+  ) {
+    data {
+      id
+      family
+      genus
+      species
+   	  class
+	    order
+      scientificName
+      commonNameEnglish
+      taxonLevel
+      uniqueIdentifier
+    }
+  }
+}

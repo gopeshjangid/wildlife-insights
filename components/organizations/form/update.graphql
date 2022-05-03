@@ -1,0 +1,14 @@
+mutation updateOrganization($organizationId: ID!, $body: OrganizationUpdate!) {
+  updateOrganization(organizationId: $organizationId, body: $body) {
+    name
+    streetAddress
+    city
+    state
+    postalCode
+    phone
+    email
+    countryCode
+    organizationUrl
+    remarks
+  }
+}

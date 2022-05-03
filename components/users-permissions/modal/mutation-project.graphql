@@ -1,0 +1,7 @@
+mutation manageParticipant($body: [ManageParticipantInput]) {
+  manageProjectParticipant(body: $body) {
+    create
+    update
+    delete
+  }
+}

@@ -1,0 +1,802 @@
+[
+  {
+    "x": 1,
+    "y": 0.335,
+    "color": "green",
+    "low95": 0.051,
+    "hi95": 0.638,
+    "Species_name": "Proechimys brevicauda"
+  },
+  {
+    "x": 2,
+    "y": 0.218,
+    "color": "lightgreen",
+    "low95": -0.06,
+    "hi95": 0.557,
+    "Species_name": "Hylaeamys megacephalus"
+  },
+  {
+    "x": 3,
+    "y": 0.212,
+    "color": "lightgreen",
+    "low95": -0.042,
+    "hi95": 0.484,
+    "Species_name": "Crypturellus bartletti"
+  },
+  {
+    "x": 4,
+    "y": 0.186,
+    "color": "lightgreen",
+    "low95": -0.056,
+    "hi95": 0.456,
+    "Species_name": "Cuniculus paca"
+  },
+  {
+    "x": 5,
+    "y": 0.182,
+    "color": "lightgreen",
+    "low95": -0.084,
+    "hi95": 0.488,
+    "Species_name": "Cebus albifrons"
+  },
+  {
+    "x": 6,
+    "y": 0.181,
+    "color": "lightgreen",
+    "low95": -0.059,
+    "hi95": 0.457,
+    "Species_name": "Leopardus pardalis"
+  },
+  {
+    "x": 7,
+    "y": 0.175,
+    "color": "lightgreen",
+    "low95": -0.063,
+    "hi95": 0.441,
+    "Species_name": "Pecari tajacu"
+  },
+  {
+    "x": 8,
+    "y": 0.157,
+    "color": "lightgreen",
+    "low95": -0.129,
+    "hi95": 0.487,
+    "Species_name": "Puma yagouaroundi"
+  },
+  {
+    "x": 9,
+    "y": 0.157,
+    "color": "lightgreen",
+    "low95": -0.117,
+    "hi95": 0.48,
+    "Species_name": "Marmosa regina"
+  },
+  {
+    "x": 10,
+    "y": 0.155,
+    "color": "lightgreen",
+    "low95": -0.091,
+    "hi95": 0.427,
+    "Species_name": "Tapirus terrestris"
+  },
+  {
+    "x": 11,
+    "y": 0.145,
+    "color": "lightgreen",
+    "low95": -0.168,
+    "hi95": 0.495,
+    "Species_name": "Buteogallus anthracinus"
+  },
+  {
+    "x": 12,
+    "y": 0.143,
+    "color": "lightgreen",
+    "low95": -0.154,
+    "hi95": 0.483,
+    "Species_name": "Saimiri sciureus"
+  },
+  {
+    "x": 13,
+    "y": 0.126,
+    "color": "lightgreen",
+    "low95": -0.117,
+    "hi95": 0.381,
+    "Species_name": "Leptotila rufaxilla"
+  },
+  {
+    "x": 14,
+    "y": 0.119,
+    "color": "lightgreen",
+    "low95": -0.145,
+    "hi95": 0.407,
+    "Species_name": "Chamaeza nobilis"
+  },
+  {
+    "x": 15,
+    "y": 0.115,
+    "color": "lightgreen",
+    "low95": -0.165,
+    "hi95": 0.458,
+    "Species_name": "Priodontes maximus"
+  },
+  {
+    "x": 16,
+    "y": 0.115,
+    "color": "lightgreen",
+    "low95": -0.142,
+    "hi95": 0.398,
+    "Species_name": "Eira barbara"
+  },
+  {
+    "x": 17,
+    "y": 0.115,
+    "color": "lightgreen",
+    "low95": -0.204,
+    "hi95": 0.476,
+    "Species_name": "Eurypyga helias"
+  },
+  {
+    "x": 18,
+    "y": 0.089,
+    "color": "lightgreen",
+    "low95": -0.156,
+    "hi95": 0.353,
+    "Species_name": "Mazama americana"
+  },
+  {
+    "x": 19,
+    "y": 0.083,
+    "color": "lightgreen",
+    "low95": -0.16,
+    "hi95": 0.338,
+    "Species_name": "Psophia leucoptera"
+  },
+  {
+    "x": 20,
+    "y": 0.079,
+    "color": "grey",
+    "low95": -0.176,
+    "hi95": 0.334,
+    "Species_name": "Mitu tuberosum"
+  },
+  {
+    "x": 21,
+    "y": 0.079,
+    "color": "grey",
+    "low95": -0.183,
+    "hi95": 0.356,
+    "Species_name": "Myrmecophaga tridactyla"
+  },
+  {
+    "x": 22,
+    "y": 0.078,
+    "color": "grey",
+    "low95": -0.172,
+    "hi95": 0.331,
+    "Species_name": "Dasyprocta punctata"
+  },
+  {
+    "x": 23,
+    "y": 0.068,
+    "color": "grey",
+    "low95": -0.188,
+    "hi95": 0.34,
+    "Species_name": "Crypturellus soui"
+  },
+  {
+    "x": 24,
+    "y": 0.068,
+    "color": "grey",
+    "low95": -0.292,
+    "hi95": 0.421,
+    "Species_name": "Homo sapiens"
+  },
+  {
+    "x": 25,
+    "y": 0.065,
+    "color": "grey",
+    "low95": -0.187,
+    "hi95": 0.324,
+    "Species_name": "Aramides cajaneus"
+  },
+  {
+    "x": 26,
+    "y": 0.062,
+    "color": "grey",
+    "low95": -0.195,
+    "hi95": 0.318,
+    "Species_name": "Myoprocta pratti"
+  },
+  {
+    "x": 27,
+    "y": 0.062,
+    "color": "grey",
+    "low95": -0.179,
+    "hi95": 0.326,
+    "Species_name": "Tinamus major"
+  },
+  {
+    "x": 28,
+    "y": 0.058,
+    "color": "grey",
+    "low95": -0.23,
+    "hi95": 0.365,
+    "Species_name": "Saimiri boliviensis"
+  },
+  {
+    "x": 29,
+    "y": 0.057,
+    "color": "grey",
+    "low95": -0.222,
+    "hi95": 0.351,
+    "Species_name": "Procyon cancrivorus"
+  },
+  {
+    "x": 30,
+    "y": 0.057,
+    "color": "grey",
+    "low95": -0.278,
+    "hi95": 0.415,
+    "Species_name": "Proechimys semispinosus"
+  },
+  {
+    "x": 31,
+    "y": 0.052,
+    "color": "grey",
+    "low95": -0.207,
+    "hi95": 0.321,
+    "Species_name": "Tinamus tao"
+  },
+  {
+    "x": 32,
+    "y": 0.046,
+    "color": "grey",
+    "low95": -0.232,
+    "hi95": 0.328,
+    "Species_name": "Turdus albicollis"
+  },
+  {
+    "x": 33,
+    "y": 0.042,
+    "color": "grey",
+    "low95": -0.294,
+    "hi95": 0.367,
+    "Species_name": "Ardea cinerea"
+  },
+  {
+    "x": 34,
+    "y": 0.04,
+    "color": "grey",
+    "low95": -0.242,
+    "hi95": 0.309,
+    "Species_name": "Formicarius colma"
+  },
+  {
+    "x": 35,
+    "y": 0.04,
+    "color": "grey",
+    "low95": -0.323,
+    "hi95": 0.394,
+    "Species_name": "Desmodus rotundus"
+  },
+  {
+    "x": 36,
+    "y": 0.039,
+    "color": "grey",
+    "low95": -0.305,
+    "hi95": 0.386,
+    "Species_name": "Ardea cocoi"
+  },
+  {
+    "x": 37,
+    "y": 0.037,
+    "color": "grey",
+    "low95": -0.315,
+    "hi95": 0.378,
+    "Species_name": "Furnarius leucopus"
+  },
+  {
+    "x": 38,
+    "y": 0.037,
+    "color": "grey",
+    "low95": -0.329,
+    "hi95": 0.401,
+    "Species_name": "Molothrus oryzivorus"
+  },
+  {
+    "x": 39,
+    "y": 0.035,
+    "color": "grey",
+    "low95": -0.327,
+    "hi95": 0.38,
+    "Species_name": "Cairina moschata"
+  },
+  {
+    "x": 40,
+    "y": 0.035,
+    "color": "grey",
+    "low95": -0.31,
+    "hi95": 0.382,
+    "Species_name": "Didelphis virginiana"
+  },
+  {
+    "x": 41,
+    "y": 0.035,
+    "color": "grey",
+    "low95": -0.324,
+    "hi95": 0.395,
+    "Species_name": "Micrastur semitorquatus"
+  },
+  {
+    "x": 42,
+    "y": 0.034,
+    "color": "grey",
+    "low95": -0.242,
+    "hi95": 0.306,
+    "Species_name": "Geotrygon montana"
+  },
+  {
+    "x": 43,
+    "y": 0.034,
+    "color": "grey",
+    "low95": -0.309,
+    "hi95": 0.397,
+    "Species_name": "Lontra longicaudis"
+  },
+  {
+    "x": 44,
+    "y": 0.033,
+    "color": "grey",
+    "low95": -0.233,
+    "hi95": 0.297,
+    "Species_name": "Philander opossum"
+  },
+  {
+    "x": 45,
+    "y": 0.032,
+    "color": "grey",
+    "low95": -0.338,
+    "hi95": 0.395,
+    "Species_name": "Strix virgata"
+  },
+  {
+    "x": 46,
+    "y": 0.028,
+    "color": "grey",
+    "low95": -0.31,
+    "hi95": 0.371,
+    "Species_name": "Arremon taciturnus"
+  },
+  {
+    "x": 47,
+    "y": 0.027,
+    "color": "grey",
+    "low95": -0.331,
+    "hi95": 0.372,
+    "Species_name": "Baryphthengus martii"
+  },
+  {
+    "x": 48,
+    "y": 0.026,
+    "color": "grey",
+    "low95": -0.312,
+    "hi95": 0.371,
+    "Species_name": "Tigrisoma lineatum"
+  },
+  {
+    "x": 49,
+    "y": 0.019,
+    "color": "grey",
+    "low95": -0.317,
+    "hi95": 0.373,
+    "Species_name": "Sclerurus mexicanus"
+  },
+  {
+    "x": 50,
+    "y": 0.018,
+    "color": "grey",
+    "low95": -0.333,
+    "hi95": 0.363,
+    "Species_name": "Morphnus guianensis"
+  },
+  {
+    "x": 51,
+    "y": 0.016,
+    "color": "grey",
+    "low95": -0.325,
+    "hi95": 0.34,
+    "Species_name": "Leopardus tigrinus"
+  },
+  {
+    "x": 52,
+    "y": 0.014,
+    "color": "grey",
+    "low95": -0.274,
+    "hi95": 0.289,
+    "Species_name": "Formicarius analis"
+  },
+  {
+    "x": 53,
+    "y": 0.013,
+    "color": "grey",
+    "low95": -0.274,
+    "hi95": 0.296,
+    "Species_name": "Sylvilagus brasiliensis"
+  },
+  {
+    "x": 54,
+    "y": 0.013,
+    "color": "grey",
+    "low95": -0.311,
+    "hi95": 0.337,
+    "Species_name": "Leucopternis schistaceus"
+  },
+  {
+    "x": 55,
+    "y": 0.009,
+    "color": "grey",
+    "low95": -0.232,
+    "hi95": 0.26,
+    "Species_name": "Dasypus novemcinctus"
+  },
+  {
+    "x": 56,
+    "y": 0.007,
+    "color": "grey",
+    "low95": -0.247,
+    "hi95": 0.265,
+    "Species_name": "Dasypus kappleri"
+  },
+  {
+    "x": 57,
+    "y": 0.004,
+    "color": "grey",
+    "low95": -0.244,
+    "hi95": 0.251,
+    "Species_name": "Sciurus ignitus"
+  },
+  {
+    "x": 58,
+    "y": 0.004,
+    "color": "grey",
+    "low95": -0.272,
+    "hi95": 0.26,
+    "Species_name": "Odontophorus stellatus"
+  },
+  {
+    "x": 59,
+    "y": -0,
+    "color": "grey",
+    "low95": -0.342,
+    "hi95": 0.303,
+    "Species_name": "Neomorphus geoffroyi"
+  },
+  {
+    "x": 60,
+    "y": -0.007,
+    "color": "grey",
+    "low95": -0.266,
+    "hi95": 0.242,
+    "Species_name": "Didelphis marsupialis"
+  },
+  {
+    "x": 61,
+    "y": -0.013,
+    "color": "grey",
+    "low95": -0.331,
+    "hi95": 0.295,
+    "Species_name": "Cebus apella"
+  },
+  {
+    "x": 62,
+    "y": -0.014,
+    "color": "grey",
+    "low95": -0.281,
+    "hi95": 0.251,
+    "Species_name": "Puma concolor"
+  },
+  {
+    "x": 63,
+    "y": -0.015,
+    "color": "grey",
+    "low95": -0.308,
+    "hi95": 0.259,
+    "Species_name": "Euryoryzomys nitidus"
+  },
+  {
+    "x": 64,
+    "y": -0.016,
+    "color": "grey",
+    "low95": -0.363,
+    "hi95": 0.312,
+    "Species_name": "Pipile cumanensis"
+  },
+  {
+    "x": 65,
+    "y": -0.017,
+    "color": "grey",
+    "low95": -0.34,
+    "hi95": 0.286,
+    "Species_name": "Corythopis torquatus"
+  },
+  {
+    "x": 66,
+    "y": -0.02,
+    "color": "grey",
+    "low95": -0.365,
+    "hi95": 0.316,
+    "Species_name": "Saguinus fuscicollis"
+  },
+  {
+    "x": 67,
+    "y": -0.023,
+    "color": "grey",
+    "low95": -0.319,
+    "hi95": 0.246,
+    "Species_name": "Panthera onca"
+  },
+  {
+    "x": 68,
+    "y": -0.036,
+    "color": "grey",
+    "low95": -0.418,
+    "hi95": 0.314,
+    "Species_name": "Dichrozona cincta"
+  },
+  {
+    "x": 69,
+    "y": -0.04,
+    "color": "grey",
+    "low95": -0.416,
+    "hi95": 0.306,
+    "Species_name": "Spizaetus ornatus"
+  },
+  {
+    "x": 70,
+    "y": -0.044,
+    "color": "grey",
+    "low95": -0.412,
+    "hi95": 0.296,
+    "Species_name": "Myrmeciza fortis"
+  },
+  {
+    "x": 71,
+    "y": -0.045,
+    "color": "grey",
+    "low95": -0.431,
+    "hi95": 0.321,
+    "Species_name": "No specie name"
+  },
+  {
+    "x": 72,
+    "y": -0.045,
+    "color": "grey",
+    "low95": -0.448,
+    "hi95": 0.318,
+    "Species_name": "Sciurus igniventris"
+  },
+  {
+    "x": 73,
+    "y": -0.047,
+    "color": "grey",
+    "low95": -0.425,
+    "hi95": 0.292,
+    "Species_name": "Formicarius rufifrons"
+  },
+  {
+    "x": 74,
+    "y": -0.048,
+    "color": "grey",
+    "low95": -0.429,
+    "hi95": 0.282,
+    "Species_name": "Rhegmatorhina melanosticta"
+  },
+  {
+    "x": 75,
+    "y": -0.05,
+    "color": "grey",
+    "low95": -0.436,
+    "hi95": 0.296,
+    "Species_name": "Spizaetus tyrannus"
+  },
+  {
+    "x": 76,
+    "y": -0.05,
+    "color": "grey",
+    "low95": -0.436,
+    "hi95": 0.295,
+    "Species_name": "Ateles chamek"
+  },
+  {
+    "x": 77,
+    "y": -0.052,
+    "color": "grey",
+    "low95": -0.436,
+    "hi95": 0.314,
+    "Species_name": "Myrmeciza hyperythra"
+  },
+  {
+    "x": 78,
+    "y": -0.066,
+    "color": "grey",
+    "low95": -0.404,
+    "hi95": 0.225,
+    "Species_name": "Cochlearius cochlearius"
+  },
+  {
+    "x": 79,
+    "y": -0.071,
+    "color": "grey",
+    "low95": -0.463,
+    "hi95": 0.26,
+    "Species_name": "Turdus hauxwelli"
+  },
+  {
+    "x": 80,
+    "y": -0.071,
+    "color": "grey",
+    "low95": -0.453,
+    "hi95": 0.258,
+    "Species_name": "Pteronura brasiliensis"
+  },
+  {
+    "x": 81,
+    "y": -0.071,
+    "color": "grey",
+    "low95": -0.489,
+    "hi95": 0.272,
+    "Species_name": "Myrmoborus myotherinus"
+  },
+  {
+    "x": 82,
+    "y": -0.074,
+    "color": "grey",
+    "low95": -0.422,
+    "hi95": 0.261,
+    "Species_name": "Momotus momota"
+  },
+  {
+    "x": 83,
+    "y": -0.075,
+    "color": "grey",
+    "low95": -0.474,
+    "hi95": 0.272,
+    "Species_name": "Micrastur mirandollei"
+  },
+  {
+    "x": 84,
+    "y": -0.081,
+    "color": "grey",
+    "low95": -0.443,
+    "hi95": 0.224,
+    "Species_name": "Sciurus spadiceus"
+  },
+  {
+    "x": 85,
+    "y": -0.082,
+    "color": "grey",
+    "low95": -0.488,
+    "hi95": 0.257,
+    "Species_name": "Hydrochoerus hydrochaeris"
+  },
+  {
+    "x": 86,
+    "y": -0.086,
+    "color": "grey",
+    "low95": -0.406,
+    "hi95": 0.215,
+    "Species_name": "Nasua nasua"
+  },
+  {
+    "x": 87,
+    "y": -0.096,
+    "color": "grey",
+    "low95": -0.402,
+    "hi95": 0.179,
+    "Species_name": "Crypturellus undulatus"
+  },
+  {
+    "x": 88,
+    "y": -0.098,
+    "color": "grey",
+    "low95": -0.478,
+    "hi95": 0.228,
+    "Species_name": "Tinamus guttatus"
+  },
+  {
+    "x": 89,
+    "y": -0.101,
+    "color": "grey",
+    "low95": -0.45,
+    "hi95": 0.2,
+    "Species_name": "Leopardus wiedii"
+  },
+  {
+    "x": 90,
+    "y": -0.104,
+    "color": "grey",
+    "low95": -0.417,
+    "hi95": 0.181,
+    "Species_name": "Crypturellus cinereus"
+  },
+  {
+    "x": 91,
+    "y": -0.107,
+    "color": "orange",
+    "low95": -0.439,
+    "hi95": 0.173,
+    "Species_name": "Atelocynus microtis"
+  },
+  {
+    "x": 92,
+    "y": -0.108,
+    "color": "orange",
+    "low95": -0.411,
+    "hi95": 0.164,
+    "Species_name": "Crypturellus variegatus"
+  },
+  {
+    "x": 93,
+    "y": -0.109,
+    "color": "grey",
+    "low95": -0.472,
+    "hi95": 0.18,
+    "Species_name": "Tamandua tetradactyla"
+  },
+  {
+    "x": 94,
+    "y": -0.121,
+    "color": "grey",
+    "low95": -0.516,
+    "hi95": 0.204,
+    "Species_name": "Geotrygon violacea"
+  },
+  {
+    "x": 95,
+    "y": -0.137,
+    "color": "orange",
+    "low95": -0.539,
+    "hi95": 0.182,
+    "Species_name": "Monodelphis glirina"
+  },
+  {
+    "x": 96,
+    "y": -0.144,
+    "color": "orange",
+    "low95": -0.488,
+    "hi95": 0.148,
+    "Species_name": "Penelope jacquacu"
+  },
+  {
+    "x": 97,
+    "y": -0.148,
+    "color": "orange",
+    "low95": -0.564,
+    "hi95": 0.179,
+    "Species_name": "Crypturellus atrocapillus"
+  },
+  {
+    "x": 98,
+    "y": -0.157,
+    "color": "orange",
+    "low95": -0.568,
+    "hi95": 0.169,
+    "Species_name": "Buteogallus urubitinga"
+  },
+  {
+    "x": 99,
+    "y": -0.244,
+    "color": "orange",
+    "low95": -0.575,
+    "hi95": 0.04,
+    "Species_name": "Tayassu pecari"
+  },
+  {
+    "x": 100,
+    "y": -0.265,
+    "color": "orange",
+    "low95": -0.63,
+    "hi95": 0.055,
+    "Species_name": "Proechimys unknown"
+  }
+]

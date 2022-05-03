@@ -1,0 +1,8 @@
+query getHighlightedPhotos($projectId: Int, $isARK: Boolean) {
+  getProjectHighlightedPhotos(projectId: $projectId, isARK: $isARK) {
+    highlightedPhotos {
+      thumbnailUrl
+      imageSpecies
+    }
+  }
+}

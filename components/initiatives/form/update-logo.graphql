@@ -1,0 +1,10 @@
+mutation updateInitiativeLogo(
+  $initiativeId: ID!
+  $id: ID!
+  $body: InitiativeFileUpdate!
+) {
+  updateInitiativeLogo(initiativeId: $initiativeId, id: $id, body: $body) {
+    id
+    text
+  }
+}

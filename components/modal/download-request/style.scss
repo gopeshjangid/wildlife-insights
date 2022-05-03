@@ -1,0 +1,55 @@
+@import 'css/settings';
+
+.c-download-request-modal {
+  width: rem(488) !important;
+  min-height: rem(141) !important;
+  max-height: rem(341) !important;
+  margin-top: 5% !important;
+  .c-form-select__control {
+    overflow-y: auto;
+  }
+  .download-head {
+    font-size: rem(16);
+    color: $black;
+    font-weight: 600;
+  }
+  .pointer {
+    background: none;
+    border: 0;
+    padding: 0;
+  }
+  .content-panel {
+    padding: rem(22) rem(20) rem(16);
+    background: $body-bg;
+    border-radius: $border-radius;
+    box-shadow: 0 rem(8) rem(11) 0 rgba(0, 0, 0, 0.15);
+    .signin-form {
+      margin-top: rem(20);
+    }
+    .terms {
+      a {
+        color: $black;
+        font-weight: 500;
+        text-decoration: underline;
+      }
+    }
+    p {
+      color: $black;
+    }
+    .link-sent {
+      color: $black;
+      font-weight: 500;
+      img {
+        float: left;
+        margin-right: rem(10);
+        margin-top: rem(2);
+      }
+    }
+  }
+
+  .actions-panel {
+    display: flex;
+    justify-content: space-between;
+    padding-top: $margin-size;
+  }
+}

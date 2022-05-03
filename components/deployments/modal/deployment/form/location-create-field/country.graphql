@@ -1,0 +1,8 @@
+query getCountryFromCoordinates($latitude: Float!, $longitude: Float!) {
+  reverseGeocodeCountryFromCoordinates(
+    latitude: $latitude
+    longitude: $longitude
+  ) {
+    countryCodeISO3166Alpha3
+  }
+}

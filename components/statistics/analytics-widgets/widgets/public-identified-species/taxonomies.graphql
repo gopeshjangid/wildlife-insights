@@ -1,0 +1,12 @@
+query getTaxonomies($taxonomyUUIDs: [String]) {
+  getTaxonomiesPublic(
+    filters: { taxonomyUUIDs: $taxonomyUUIDs }
+    pagination: { pageSize: 100 }
+  ) {
+    data {
+      uniqueIdentifier
+      commonNameEnglish
+      scientificName
+    }
+  }
+}

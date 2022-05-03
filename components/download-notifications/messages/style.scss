@@ -1,0 +1,77 @@
+@import 'css/settings';
+
+.c-download-messages {
+  .heading {
+    color: $shark;
+    font-size: rem(24);
+    font-weight: 700;
+  }
+  .right-arrow {
+    position: relative;
+    left: 100.5%;
+    top: rem(106);
+  }
+
+  .left-arrow {
+    position: relative;
+    top: rem(106);
+    right: 2.8%;
+  }
+
+  .copy-content {
+    background: $white;
+    border: 0;
+    bottom: rem(4);
+    position: relative;
+    padding: 0;
+    margin-left: rem(5);
+  }
+
+  li {
+    background-color: $white !important;
+  }
+
+  .message-box {
+    width: 49.5%;
+    border: solid rem(1) $speech-green;
+    border-radius: rem(8);
+    height: rem(192);
+    max-height: rem(192);
+    padding: rem(24);
+    overflow-y: auto;
+    color: $shuttle-grey;
+
+    .mt-6 {
+      margin-top: rem(6);
+    }
+    .subject {
+      color: $shark;
+      font-size: rem(14);
+      font-weight: 500;
+    }
+    .email {
+      float: left;
+    }
+    .copy-img {
+      position: relative;
+      bottom: rem(1);
+      margin-left: rem(5);
+    }
+  }
+
+  .empty {
+    width: 100%;
+    text-align: center;
+    line-height: rem(190);
+    padding: 0;
+    margin: 0;
+  }
+
+  .loading-style {
+    opacity: 0.5;
+  }
+
+  .error {
+    color: $danger;
+  }
+}

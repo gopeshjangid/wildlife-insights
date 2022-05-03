@@ -1,0 +1,52 @@
+@import 'css/settings';
+
+.c-initiatives-nav {
+  margin-top: rem(15);
+  margin-bottom: rem(15);
+
+  color: $grey;
+
+  .no-data {
+    font-size: $small-font-size;
+  }
+
+  > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    > li {
+      font-size: rem(14);
+      margin-bottom: $ui-space;
+
+      > a {
+        position: relative;
+        display: inline-block;
+        color: $grey;
+        letter-spacing: 0.3px;
+
+        &.-active,
+        &:hover {
+          color: $body-color;
+          font-weight: bold;
+          text-decoration: none;
+        }
+
+        &.-active {
+          &::after {
+            display: block;
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+
+            background: $primary;
+            box-shadow: $box-shadow;
+            height: 3px;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

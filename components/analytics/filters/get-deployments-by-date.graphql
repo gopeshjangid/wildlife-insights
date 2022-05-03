@@ -1,0 +1,14 @@
+query getDeploymentsCountByDate(
+  $projectId: Int!
+  $deploymentCountByDateRequest: DeploymentCountByDateRequest!
+) {
+  getDeploymentsCountByDate(
+    projectId: $projectId
+    deploymentCountByDateRequest: $deploymentCountByDateRequest
+  ) {
+    data {
+      requestedDate
+      deploymentCount
+    }
+  }
+}

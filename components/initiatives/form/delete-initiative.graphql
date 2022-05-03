@@ -1,0 +1,5 @@
+mutation deleteInitiative($initiativeId: ID!) {
+  deleteInitiative(initiativeId: $initiativeId) {
+    id
+  }
+}

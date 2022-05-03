@@ -1,0 +1,6 @@
+mutation manageUserWhitelistedStatus($body: [UserWhitelistedStatusInput]) {
+  manageUserWhitelistedStatus(body: $body) {
+    successfulOperationsCount
+    failedOperationsCount
+  }
+}

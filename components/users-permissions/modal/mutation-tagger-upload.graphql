@@ -1,0 +1,6 @@
+mutation updateProject($organizationId: Int!, $body: ProjectUpdateTaggerUpload!,$projectId: ID!) {
+  updateProjectTaggerUpload(organizationId: $organizationId, body: $body, projectId:$projectId) {
+    id
+    name
+  }
+}

@@ -1,0 +1,8 @@
+query getDiscoverFilters {
+  getDiscoverFilters {
+    timespan {
+      start
+      end
+    }
+  }
+}

@@ -1,0 +1,92 @@
+@import "css/settings";
+
+div.c-highlighted-photos-modal.ReactModal__Content {
+  width: calc(100vw - #{3 * $out-space});
+  height: calc(100vh - #{2 * map-get($spacers, 5)});
+  padding: 0;
+  background-color: unset;
+
+  .content-panel {
+    background-color: $bg-color-primary;
+    .header-class {
+      padding: rem(7);
+      align-items: center;
+      .close-btn {
+        background: none;
+        border: 0;
+        padding: 0;
+        width: rem(25);
+        height: rem(25);
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .slider {
+    .slick-arrow {
+      display: block;
+      position: absolute;
+      top: rem(250);
+      width: rem(25);
+      height: rem(25);
+      padding: 0;
+      border-radius: 100%;
+      background: $primary;
+      box-shadow: $box-shadow;
+      z-index: 1;
+
+      &:before {
+        content: none;
+      }
+
+      svg {
+        width: rem(15);
+        height: rem(15);
+
+        path {
+          fill: $dark;
+        }
+      }
+
+      &.slick-prev {
+        left: 0;
+        transform: translate(-50%, -50%);
+      }
+
+      &.slick-next {
+        right: 0;
+        transform: translate(50%, -50%);
+      }
+    }
+
+    .photo-container {
+      .photo {
+        background-color: $bg-color-primary;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: rem(500);
+
+        > img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          object-fit: contain;
+          object-position: center center;
+        }
+      }
+
+      .img-species {
+        text-align: center;
+        user-select: text;
+        color: $white;
+        margin: 0;
+        padding: rem(8) rem(100);
+      }
+    }
+  }
+}

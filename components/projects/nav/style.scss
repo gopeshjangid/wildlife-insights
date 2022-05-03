@@ -1,0 +1,58 @@
+@import 'css/settings';
+
+.c-projects-nav {
+  margin-left: rem(25);
+  margin-top: rem(15);
+  margin-bottom: rem(15);
+
+  color: $grey;
+
+  .no-data {
+    font-size: $small-font-size;
+  }
+
+  > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    > li {
+      margin-bottom: $ui-space;
+
+      > a {
+        position: relative;
+        display: inline-block;
+        color: $grey;
+        letter-spacing: 0.3px;
+        will-change: color;
+        transition: color .2s ease;
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        &.-active,
+        &:hover {
+          color: $dark;
+        }
+
+        &.-active {
+          font-weight: bold;
+
+          &::after {
+            display: block;
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            background: $primary;
+            border-radius: 2px;
+            box-shadow: $box-shadow-borders;
+            height: 3px;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

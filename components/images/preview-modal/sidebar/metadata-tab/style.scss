@@ -1,0 +1,31 @@
+@import 'css/settings';
+
+.c-sidebar-metadata-tab {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  font-size: rem(14);
+
+  .c-map-no-ssr {
+    height: rem(220);
+    z-index: 0;
+  }
+
+  .btn-edit-date-time {
+    position: relative;
+    left: rem(133);
+    bottom: rem(1);
+  }
+
+  .flag {
+    position: relative;
+    bottom: rem(5);
+    left: rem(3);
+    .svg-inline--fa {
+      path {
+        fill: $primary;
+      }
+    }
+  }
+}

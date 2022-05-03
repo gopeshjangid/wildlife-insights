@@ -1,0 +1,10 @@
+query getImage($projectId: Int!, $deploymentId: Int!, $id: ID!) {
+  getDataFile(projectId: $projectId, deploymentId: $deploymentId, id: $id) {
+    exifDataFiles {
+      value
+      exifTag {
+        tagName
+      }
+    }
+  }
+}

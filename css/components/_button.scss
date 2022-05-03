@@ -1,0 +1,56 @@
+button:focus {
+  outline: 0;
+}
+
+.disabled,
+button:disabled,
+.btn:disabled {
+  cursor: not-allowed;
+}
+
+.btn {
+  &.btn-primary {
+    &:hover:not([disabled]) {
+      box-shadow: $btn-box-shadow-alt;
+    }
+  }
+
+  &.btn-primary.btn-alt {
+    background: $white;
+    border-color: $white;
+    box-shadow: $btn-box-shadow-alt;
+
+    &:hover:not([disabled]) {
+      box-shadow: $btn-box-shadow-alt-hover;
+    }
+  }
+
+  &.btn-secondary {
+    box-shadow: none;
+    border-color: transparent;
+    color: $primary-alt;
+
+    &:hover:not([disabled]) {
+      border-color: $primary;
+      box-shadow: none;
+      color: $primary-alt;
+    }
+
+    &.active:not([disabled]) {
+      color: $primary-alt;
+    }
+  }
+
+  &.btn-secondary.btn-alt {
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: none;
+    color: $white;
+
+    &:hover:not([disabled]) {
+      background-color: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.3);
+      box-shadow: none;
+    }
+  }
+}

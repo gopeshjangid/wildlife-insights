@@ -1,0 +1,5 @@
+query getAnalytics($projectId: Int) {
+  getAnalyticsPublic(projectId: $projectId) {
+    imagesPerSpecies
+  }
+}

@@ -1,0 +1,17 @@
+query getDataFilesForProject($projectId: Int!) {
+  getDataFilesForProject(
+    projectId: $projectId,
+    pagination: {
+      pageSize: 1,
+      sort: { column: "createdAt", order: "DESC" }
+    }
+  ) {
+    data {
+      name
+      data {
+        id
+        thumbnailUrl
+      }
+    }
+  }
+}

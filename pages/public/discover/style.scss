@@ -1,0 +1,72 @@
+@import 'css/settings';
+
+.p-public-discover {
+  height: calc(100vh - #{$header-size-sm});
+
+  @media screen and (min-width: map-get($grid-breakpoints, 'sm')) {
+    height: calc(100vh - #{$header-size});
+  }
+
+  .l-public-page {
+    height: 100%;
+  }
+
+  .page-container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-left: #{$out-space / 2};
+    padding-right: #{$out-space / 2};
+
+    @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+      padding-left: $out-space;
+      padding-right: $out-space;
+    }
+
+    > .c-loading-spinner svg {
+      top: auto;
+      right: rem(11);
+      bottom: rem(11);
+      left: auto;
+    }
+
+    .sidebar {
+      position: relative;
+      max-width: 50%; // Needed for the slider to not go crazy
+      flex-basis: 50%;
+      z-index: 2; // Needed to display the shadow on top of the map
+    }
+
+    .sidebar-collapse-btn {
+      position: absolute;
+      left: 100%;
+      right: auto;
+      top: rem(30);
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      white-space: nowrap;
+    }
+
+    .map {
+      flex-basis: calc(50% + #{$out-space / 2});
+      margin-right: -#{$out-space / 2};
+
+      @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+        flex-basis: calc(50% + #{$out-space});
+        margin-right: -#{$out-space};
+      }
+
+      &.is-collapsed {
+        flex-basis: calc(100% + #{$out-space});
+        margin-left: -#{$out-space / 2};
+
+        @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+          flex-basis: calc(100% + #{2 * $out-space});
+          margin-left: -#{$out-space};
+        }
+      }
+    }
+  }
+}

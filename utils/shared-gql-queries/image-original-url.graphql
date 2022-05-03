@@ -1,0 +1,9 @@
+query getImageUrl($projectId: Int!, $deploymentId: Int!, $id: ID!) {
+  getDataFileDownloadUrl(
+    projectId: $projectId
+    deploymentId: $deploymentId
+    id: $id
+  ) {
+    url
+  }
+}

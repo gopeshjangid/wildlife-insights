@@ -1,0 +1,168 @@
+@import 'css/settings';
+
+.project-container {
+  .project-error {
+    height: rem(50);
+    margin: 0 auto;
+    margin-top: rem(20);
+  }
+  .project-table-container {
+    display: flex;
+    width: 98%;
+
+    .table {
+      font-size: rem(14);
+      border: 0;
+      width: 60%;
+      margin-top: 20px;
+      .rt-thead.-header {
+        box-shadow: none;
+        .rt-th {
+          text-align: left;
+          font-weight: $font-weight-bold;
+          border-right: 0;
+
+          &.-sort-asc {
+            div:first-child:after {
+              content: $sort-arrow-up;
+              margin-left: $sort-arrow-left-space;
+            }
+            box-shadow: none;
+          }
+
+          &.-sort-desc {
+            div:first-child:after {
+              content: $sort-arrow-down;
+              margin-left: $sort-arrow-left-space;
+            }
+            box-shadow: none;
+          }
+        }
+
+        .-cursor-pointer {
+          div:first-child:after {
+            content: $sort-arrow-default;
+            margin-left: $sort-arrow-left-space;
+          }
+        }
+      }
+
+      .rt-td {
+        display: flex;
+        align-items: center;
+      }
+
+      .rt-thead {
+        box-shadow: none !important;
+      }
+      .grid-checkbox {
+        height: 16px;
+        width: 16px;
+      }
+      .grid-checkbox:checked {
+        border: #4b825e;
+        background-color: #4b825e !important;
+      }
+    }
+    .grid-checkbox:checked {
+      border: #4b825e;
+      background-color: #4b825e !important;
+    }
+
+    .ReactTable {
+      width: 93% !important;
+      margin-top: 50px;
+      border: none !important;
+    }
+
+    .table-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .table-footer {
+      text-align: right;
+    }
+
+    .project-main-container {
+      width: 100% !important;
+      margin-top: 20px;
+    }
+
+    .checkbox-form input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+      z-index: 999 !important;
+    }
+
+    .checkbox-form label {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .checkbox-form label:before {
+      content: '';
+      top: 1px;
+      -webkit-appearance: none;
+      background-color: transparent;
+      border: rem(2) solid $bright-grey;
+      box-shadow: 0 rem(1) rem(2) rgba(0, 0, 0, 0.05),
+        inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+      padding: rem(6);
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      cursor: pointer;
+      margin-right: rem(5);
+      opacity: 0.5;
+    }
+
+    .checkbox-form input:checked + label:before {
+      background-color: $pigment-green;
+      border-color: $pigment-green;
+      opacity: 1;
+    }
+
+    .checkbox-form input:checked + label:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: rem(4.4);
+      left: rem(6);
+      width: rem(5);
+      height: rem(12);
+      border: solid $white;
+      border-width: 0 rem(2) rem(2) 0;
+      transform: rotate(45deg);
+    }
+
+    .table-footer {
+      margin-right: 25%;
+      .back {
+        margin-right: 20px;
+      }
+    }
+
+    .form-container {
+      margin-top: 40px;
+      margin-bottom: 30px;
+      width: 280px;
+    }
+
+    .text {
+      font-size: 0.9375rem;
+      line-height: 1.05rem;
+      color: $bg-color-primary;
+      font-weight: bold;
+    }
+
+    .projectNameLink {
+      font-weight: 400;
+      text-decoration: underline;
+      color: $primary;
+    }
+  }
+}

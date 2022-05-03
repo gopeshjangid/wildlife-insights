@@ -1,0 +1,58 @@
+@import 'css/settings';
+
+.c-bulk-actions-panel {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: rem(55);
+  width: 100%;
+  max-width: rem(710);
+  padding: 0 $input-btn-padding-x;
+  background: $primary-alt;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+  color: $white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+
+  .btn {
+    height: rem(35);
+    padding-top: 0;
+    padding-bottom: 0;
+
+    &:disabled {
+      opacity: 0.3;
+    }
+  }
+
+  .close-button {
+    margin: 0 map-get($spacers, 3) 0 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+
+    &:focus,
+    &:active {
+      outline: rem(2) solid $primary;
+    }
+
+    path {
+      fill: $white;
+    }
+  }
+
+  .highlight-button,
+  .delete-button {
+    width: rem(35);
+    padding: 0;
+    border-radius: 100%;
+
+    svg path {
+      fill: $white;
+    }
+  }
+}

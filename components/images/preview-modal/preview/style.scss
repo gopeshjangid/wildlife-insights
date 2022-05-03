@@ -1,0 +1,144 @@
+@import "css/settings";
+
+.c-image-preview {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: $bg-color-primary;
+
+  .close-button {
+    border-radius: 100%;
+    float: right;
+    right: 20px;
+    position: absolute;
+    z-index: 999;
+    border: 0;
+  }
+
+  .error-container {
+    height: 100%;
+    align-items: center;
+    .alert {
+      width: 100%;
+    }
+    .close-button {
+      top: rem(70);
+    }
+  }
+
+  .deployment-info {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: rem(10);
+    padding: rem(10) rem(15);
+
+    z-index: 9999;
+    background-color: $white;
+
+    .title-holder {
+      max-width: 46%;
+      word-break: break-word;
+    }
+
+    .title {
+      color: $black;
+    }
+
+    .subtitle {
+      font-size: rem(10);
+    }
+
+    .separator {
+      border-left: rem(1) solid $grey;
+      margin: 0 rem(15) 0 rem(20);
+      align-self: normal;
+    }
+  }
+
+  .image-container {
+    background-color: $body-bg;
+    background-clip: content-box;
+  }
+
+  .checkbox {
+    position: absolute;
+    top: rem(10);
+    left: rem(10);
+    z-index: 1;
+
+    input {
+      display: block;
+      width: rem(20);
+      height: rem(20);
+      border: rem(1) solid $white;
+      border-radius: 100%;
+      appearance: none;
+      cursor: pointer;
+    }
+
+    div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: rem(12);
+      height: rem(12);
+      background: $white;
+      border-radius: 100%;
+      content: "";
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    input:checked + div {
+      opacity: 1;
+    }
+
+    input:focus,
+    input:active {
+      opacity: 1;
+      box-shadow: 0 0 0 rem(2) $primary;
+      outline: 0;
+    }
+  }
+
+  .map {
+    height: 100%;
+  }
+
+  .single-view {
+    .c-map-zoom-control {
+      top: rem(40) !important;
+    }
+  }
+
+  .c-map-no-ssr {
+    height: 100%;
+
+    .map {
+      > div:first-of-type {
+        background: $bg-color-primary !important;
+      }
+    }
+
+    a[href^="http://maps.google.com/maps"]
+    {
+      display: none !important;
+    }
+    a[href^="https://maps.google.com/maps"]
+    {
+      display: none !important;
+    }
+
+    .gmnoprint a,
+    .gmnoprint span,
+    .gm-style-cc {
+      display: none;
+    }
+    .gmnoprint div {
+      background: none !important;
+    }
+  }
+}

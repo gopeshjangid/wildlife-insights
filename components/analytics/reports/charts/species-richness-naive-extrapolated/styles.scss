@@ -1,0 +1,20 @@
+.c-linechart-axis-x-tick {
+  &__label {
+    fill: #000000;
+    font-size: rem(15);
+    stroke-width: 0.8;
+    font-weight: 200;
+  }
+}
+
+.chart-container {
+  max-width: rem(800);
+  max-height: rem(600);
+  .board {
+    stroke: #d7e9e7;
+    filter: drop-shadow(rem(3) rem(5) rem(2) #a4ddb7);
+    .richness-text {
+      font-size: rem(12);
+    }
+  }
+}

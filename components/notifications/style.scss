@@ -1,0 +1,129 @@
+@import 'css/settings';
+
+.notifications-wrapper {
+  .notifications-bc {
+    position: fixed;
+    width: auto;
+    padding: 0 rem(20) rem(20) rem(20);
+    z-index: 20000; // On top of the modal (currently 10000)
+    bottom: rem(0);
+    left: 0%;
+    //transform: translateX(-50%);
+  }
+
+  .notification {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    border-radius: rem(7);
+    font-size: rem(14);
+    font-family: $font-family-sans-serif;
+    margin: rem(5) 0 0;
+    padding: rem(15) rem(40) rem(15) rem(20);
+    display: block;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    background: $white;
+    box-shadow: $btn-box-shadow-alt-hover;
+
+    &.notification-hidden {
+      opacity: 0;
+    }
+
+    &.notification-visible {
+      opacity: 1;
+    }
+  }
+
+  .notification-error .notification-title {
+    color: darken($danger, 15%);
+  }
+
+  .notification-warning .notification-title {
+    color: darken($warning, 35%);
+  }
+
+  .notification-title {
+    font-size: $font-size-base;
+    margin: 0;
+    padding: 0;
+    font-weight: $font-weight-bold;
+    letter-spacing: rem(0.3);
+    color: $dark;
+    margin-bottom: rem(.3);
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  .notification-message {
+    margin: 0;
+    padding: 0;
+
+    .notification-message {
+      // Space needed for the action button
+      padding-right: rem(100);
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  .notification-dismiss {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: rem(20);
+    transform: translateY(-50%);
+    font-size: rem(25);
+    color: $link-color;
+    text-align: center;
+    line-height: rem(25);
+    cursor: pointer;
+  }
+
+  .notification-not-dismissible {
+    cursor: default;
+  }
+
+  .notification-action-button {
+    position: absolute;
+    top: 50%;
+    right: rem(40);
+    transform: translateY(-50%);
+    text-decoration: none !important;
+  }
+
+  .notification-close-button {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: rem(15);
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: 0;
+
+    svg path {
+      fill: $primary-alt;
+    }
+  }
+
+  .notification-hide-button {
+    display: inline-block;
+    position: absolute;
+    top: 11px;
+    right: 12px;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: 0;
+
+    svg path {
+      fill: $primary-alt;
+    }
+  }
+}

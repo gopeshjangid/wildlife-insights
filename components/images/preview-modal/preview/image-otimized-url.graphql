@@ -1,0 +1,10 @@
+query getImageUrl($projectId: Int!, $deploymentId: Int!, $id: ID!, $size: Int!) {
+  getDataFilePreviewUrl(
+    projectId: $projectId
+    deploymentId: $deploymentId
+    id: $id
+    size: $size
+  ) {
+    url
+  }
+}

@@ -1,0 +1,21 @@
+query getProjects(
+  $filters: ProjectFilters
+) {
+  getProjects(
+    pagination: { 
+      pageSize: 1000,
+      sort: [
+        {column: "shortName", order: "ASC"}
+      ]
+    }
+    filters: $filters
+  ) {
+    data {
+      id
+      shortName
+      organizationId
+      taggerUpload
+      projectType
+    }
+  }
+}

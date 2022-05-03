@@ -1,0 +1,30 @@
+query getDeployment($projectId: Int!, $id: ID!) {
+  getDeployment(projectId: $projectId, id: $id) {
+    id
+    deploymentName
+    startDatetime
+    endDatetime
+    location {
+      id
+      placename
+    }
+    device {
+      id
+      name
+    }
+    sensorFailureDetails
+    sensorHeight
+    sensorOrientation
+    baitType {
+      id
+      typeName
+    }
+    metadata
+    remarks
+    quietPeriod
+    subproject {
+      id
+      name
+    }
+  }
+}

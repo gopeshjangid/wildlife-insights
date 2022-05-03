@@ -1,0 +1,108 @@
+@import "css/settings";
+
+.c-subproject-deployment-modal {
+  max-width: rem(1100);
+
+  .table {
+    font-size: rem(14);
+    border: 0;
+
+    // Increase the specificity to replace the default
+    // styles
+    .rt-thead.-header {
+      box-shadow: none;
+
+      .rt-th {
+        text-align: left;
+        font-weight: $font-weight-bold;
+        border-right: 0;
+
+        &.-sort-asc {
+          div:first-child:after {
+            content: $sort-arrow-up;
+            margin-left: $sort-arrow-left-space;
+          }
+          box-shadow: none;
+        }
+
+        &.-sort-desc {
+          div:first-child:after {
+            content: $sort-arrow-down;
+            margin-left: $sort-arrow-left-space;
+          }
+          box-shadow: none;
+        }
+      }
+      .-cursor-pointer {
+        div:first-child:after {
+          content: $sort-arrow-default;
+          margin-left: $sort-arrow-left-space;
+        }
+      }
+    }
+
+    .rt-td {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .subproject-topbar {
+    justify-content: space-between;
+    min-height: rem(39);
+    .title-filter-container {
+      flex-wrap: wrap;
+      flex: 1;
+      justify-content: space-between;
+      .align-bottom {
+        align-items: flex-end;
+      }
+      .subproject-dep-filter {
+        min-height: rem(39);
+      }
+    }
+  }
+
+  .actionbar {
+    margin-bottom: 0.8rem;
+    .title-container {
+      max-width: rem(450);
+      .title {
+        max-width: 60%;
+        h2 {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-size: 1.375rem;
+          font-weight: normal;
+          color: $black;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .count-items {
+      margin-left: rem(15);
+      font-size: rem(13);
+      color: $black;
+    }
+
+    .name-filter {
+      margin-left: rem(18);
+    }
+    .close-btn-container {
+      .close-btn {
+        background: none;
+        border: 0;
+        img {
+          vertical-align: unset;
+        }
+      }
+    }
+
+    .c-text-filter {
+      button {
+        width: rem(18);
+      }
+    }
+  }
+}

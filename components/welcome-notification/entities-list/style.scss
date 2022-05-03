@@ -1,0 +1,21 @@
+@import 'css/settings';
+
+.c-welcome-notification-entities-list {
+  margin-top: map-get($spacers, 1);
+
+  details {
+    margin: map-get($spacers, 2) 0;
+  }
+
+  summary {
+    color: $dark;
+    font-weight: $font-weight-bold;
+  }
+
+  ul {
+    max-height: rem(300);
+    margin-top: map-get($spacers, 1);
+    padding-left: rem(14);
+    overflow-y: auto;
+  }
+}

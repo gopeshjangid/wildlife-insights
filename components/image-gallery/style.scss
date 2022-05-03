@@ -1,0 +1,47 @@
+@import 'css/settings';
+
+.c-image-gallery {
+  display: grid;
+  grid-template: repeat(2, 1fr) /  2fr repeat(2, 1fr);
+  grid-gap: rem(2);
+
+  .item {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background: none;
+    border: 0;
+
+    &:first-of-type {
+      height: 50vw;
+      grid-row: 1 / span 2;
+
+      @each $breakpoint, $container-max-width in $container-max-widths {
+        @include media-breakpoint-up($breakpoint,  $grid-breakpoints) {
+          height: $container-max-width / 2;
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    background: rgba($black, .4);
+  }
+}

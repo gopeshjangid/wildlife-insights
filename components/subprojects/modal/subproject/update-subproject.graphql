@@ -1,0 +1,5 @@
+mutation updateSubProject($subProjectId: ID!, $body: SubProjectUpdate!) {
+  updateSubProject(subProjectId: $subProjectId, body: $body) {
+    id
+  }
+}

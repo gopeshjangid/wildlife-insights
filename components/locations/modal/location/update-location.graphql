@@ -1,0 +1,5 @@
+mutation updateLocation($projectId: Int!, $id: ID!, $body: LocationUpdate!) {
+  updateLocation(projectId: $projectId, id: $id, body: $body) {
+    id
+  }
+}

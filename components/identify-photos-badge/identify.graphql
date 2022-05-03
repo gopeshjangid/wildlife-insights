@@ -1,0 +1,7 @@
+query getIdentifyPhotosCount {
+  getCountInIdentify {
+    meta {
+      totalItems
+    }
+  }
+}

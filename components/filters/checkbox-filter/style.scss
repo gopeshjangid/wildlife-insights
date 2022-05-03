@@ -1,0 +1,14 @@
+@import "css/settings";
+
+div.c-checkbox-filter {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: map-get($spacers, 1) map-get($spacers, 1);
+  padding-left: 1.25rem;
+  font-size: rem(14);
+
+  input {
+    margin-top: 0;
+  }
+}

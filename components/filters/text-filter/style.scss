@@ -1,0 +1,37 @@
+@import "css/settings";
+
+div.c-text-filter {
+  input {
+    border: 0px;
+    border-bottom: 0.063rem solid $search-input-bottom-border-color;
+    padding-right: 2rem;
+    padding-left: 0.5rem;
+    padding-bottom: 0.4rem;
+    font-size: rem(13);
+    letter-spacing: rem(0.1);
+    font-style: normal;
+    width: 15.625rem;
+    &::placeholder{
+      font-style: italic;
+    }
+    &:focus {
+      outline: none;
+      border-bottom-color: $btn-bg-green;
+    }
+  }
+  button {
+    position: relative;
+    right: rem(22);
+    background: $white;
+    border: 0;
+  }
+  img.searchicon {
+    position: relative;
+    right: rem(22);
+  }
+  .close-image {
+    cursor: pointer;
+    width:rem(14);
+    height:rem(14);
+  }
+}

@@ -1,0 +1,38 @@
+@import 'css/settings';
+
+.c-actions-bar {
+  .sort-button {
+    padding: 0;
+    font-weight: normal;
+    color: $grey;
+  }
+}
+
+.c-actions-bar-sort-tooltip {
+  position: relative;
+  min-width: rem(120);
+  overflow: hidden;
+
+  input {
+    display: block;
+    position: absolute;
+    left: -10000px;
+    width: 0;
+    height: 0;
+
+    &[checked] + label {
+      color: $primary-alt;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  label {
+    display: block;
+    text-align: left;
+    cursor: pointer;
+  }
+}
+
+#searchFilter{
+  margin-top: 1.25rem;
+}

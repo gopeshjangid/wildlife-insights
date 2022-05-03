@@ -1,0 +1,108 @@
+@import 'css/settings';
+
+.c-discover-filters {
+  color: $dark;
+  font-size: $lead-font-size;
+  font-weight: $font-weight-light;
+
+  .c-filter {
+    display: inline-block;
+
+    .dropdown-button {
+      margin: 0 0.8ch;
+      padding-left: map-get($spacers, 1);
+      padding-right: map-get($spacers, 1);
+      font-size: $lead-font-size;
+      font-weight: $font-weight-light;
+      color: $primary-alt;
+      border: 0;
+      border-radius: rem(4);
+      box-shadow: none;
+      background: $secondary;
+
+      .label {
+        display: inline-block;
+        max-width: rem(300);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: 1;
+      }
+
+      .svg-inline--fa {
+        top: 0;
+        vertical-align: middle;
+      }
+    }
+
+    .select {
+      font-size: initial;
+      font-weight: initial;
+    }
+  }
+
+  .c-datepicker-filter {
+    display: inline-block;
+    margin: 0 0.8ch;
+    padding: 0 map-get($spacers, 1);
+    line-height: 1;
+    background: $secondary;
+    border-radius: rem(4);
+
+    .c-form-datepicker {
+      display: inline-block !important;
+      width: 9ch;
+
+      .form-control {
+        height: auto;
+        margin: 0;
+        padding: $btn-padding-y-sm 0;
+
+        color: $primary-alt;
+        font-size: $lead-font-size;
+        font-weight: $font-weight-light;
+        line-height: 1.25rem;
+
+        border: 0;
+        border-radius: rem(4);
+        background: none;
+        box-shadow: none;
+      }
+    }
+
+    label {
+      display: inline;
+
+      .svg-inline--fa {
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .btn-adv {
+    margin-top: rem(27);
+  }
+
+  .clear-adv-filters {
+    position: relative;
+    bottom: rem(8);
+    cursor: pointer;
+  }
+
+  .clear-adv-filters-btn {
+    border: 0;
+    background: none;
+    position: relative;
+    top: 22px;
+    height: 28px;
+    left: 11px;
+  }
+
+  .disabled {
+    opacity: 0.7;
+    input {
+      cursor: not-allowed;
+    }
+  }
+
+}

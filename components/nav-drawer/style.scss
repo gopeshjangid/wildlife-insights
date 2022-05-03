@@ -1,0 +1,91 @@
+@import 'css/settings';
+
+.c-nav-drawer {
+  .toggle-button {
+    position: fixed;
+    top: rem(140);
+    left: 0;
+    transform: rotate(-90deg) translateX(-100%);
+    transform-origin: top left;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: #{$btn-padding-y * 0.75} #{$btn-padding-x * 0.6};
+  }
+
+  .drawer {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999; // Needs to be behind tooltip (currently 9999)
+    transition: opacity 0s, visibility 0s;
+    transition-delay: .15s, .15s;
+    will-change: visibility, opacity;
+
+    &[aria-hidden="false"] {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: initial;
+      transition-delay: 0s, 0s;
+
+      .backdrop {
+        opacity: $modal-backdrop-opacity;
+      }
+
+      .c-manage-sidebar {
+        transform: translateX(100%);
+      }
+
+      .close-button {
+        opacity: 1;
+      }
+    }
+
+    .backdrop {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $modal-backdrop-bg;
+      opacity: 0;
+      transition: $transition-fade;
+      will-change: opacity;
+    }
+
+    .c-manage-sidebar {
+      position: absolute;
+      top: 0;
+      left: rem(-250);
+      width: rem(250);
+      height: 100%;
+      padding: map-get($spacers, 5) map-get($spacers, 4);
+      background-color: $white;
+      transition: $modal-transition;
+      will-change: transform;
+    }
+
+    .close-button {
+      position: absolute;
+      top: map-get($spacers, 4);
+      left: #{rem(250) + map-get($spacers, 3)};
+      padding: 0;
+      width: rem(35);
+      height: rem(35);
+      border-radius: 100%;
+      opacity: 0;
+      transition: $transition-fade;
+      will-change: opacity;
+
+      .svg-inline--fa {
+        path {
+          fill: $body-color;
+        }
+      }
+    }
+  }
+}

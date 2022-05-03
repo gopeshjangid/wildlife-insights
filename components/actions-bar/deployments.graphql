@@ -1,0 +1,14 @@
+query getDeployments($name: String) {
+  getDeployments(
+    filters: { name: $name }
+    pagination: {
+      pageSize: 50
+      sort: { column: "deploymentName", order: "ASC" }
+    }
+  ) {
+    data {
+      id
+      deploymentName
+    }
+  }
+}

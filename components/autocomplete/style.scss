@@ -1,0 +1,84 @@
+@import 'css/settings';
+
+.c-autocomplete {
+  position: relative;
+
+  .c-loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: auto;
+    right: rem(5);
+    transform: translateY(-50%);
+  }
+
+  .react-autosuggest__container {
+    position: relative;
+
+    input {
+      padding-right: rem(28); // Space for the spinner
+    }
+  }
+
+  .react-autosuggest__suggestions-container {
+    display: none;
+    position: absolute;
+    width: 100%;
+    margin-top: map-get($spacers, 2);
+    background-color: $white;
+    border-radius: rem(4);
+    box-shadow: 0 rem(10) rem(15) rem(1) rgba(darken($primary, 20%), 0.15),
+      0 0 rem(2) 0 rgba(darken($primary, 20%), 0.3);
+    z-index: 2;
+
+    &::after {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: rem(12);
+      height: rem(12);
+      background-color: $white;
+      transform: translate(rem(12), rem(-6)) rotate(45deg);
+      transform-origin: center center;
+      border-top: 1px solid rgba(darken($primary, 20%), 0.15);
+      border-left: 1px solid rgba(darken($primary, 20%), 0.15);
+      content: none;
+    }
+  }
+
+  .react-autosuggest__suggestions-container--open {
+    display: block;
+
+    &::after {
+      content: '';
+    }
+  }
+
+  .react-autosuggest__suggestions-list {
+    max-height: rem(200);
+    overflow-y: auto;
+    margin: map-get($spacers, 2) 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: rem(14);
+  }
+
+  .react-autosuggest__suggestion {
+    > * {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: map-get($spacers, 2) map-get($spacers, 3);
+      background: none;
+      border: 0;
+      color: $body-color;
+      text-decoration: none;
+      text-align: left;
+      cursor: pointer;
+    }
+  }
+
+  .react-autosuggest__suggestion--highlighted {
+    background-color: rgba($primary, 0.3);
+  }
+}

@@ -1,0 +1,3 @@
+mutation deleteInitiativePartnersLogoList($initiativeId: ID!, $ids: [ID!]) {
+  deleteInitiativePartnersLogoList(initiativeId: $initiativeId, id: $ids)
+}

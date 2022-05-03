@@ -1,0 +1,95 @@
+@import 'css/settings';
+
+.analyses-modal {
+  .content-panel {
+    .analyses-name {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      margin-bottom: rem(22);
+    }
+    .save-btn {
+      text-align: right;
+    }
+  }
+}
+
+.analyses-container {
+  width: 80%;
+  margin-top: 26px;
+
+  .analyses-list {
+    padding: 20px;
+    h6 {
+      margin-bottom: 24px;
+    }
+
+    .content-list {
+      display: flex;
+      .analyses-checkbox {
+        .grid-checkbox:checked {
+          border: $primary;
+          background-color: $primary;
+        }
+
+        .checkbox-form input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+          z-index: 999 !important;
+        }
+
+        .checkbox-form label {
+          position: relative;
+          cursor: pointer;
+        }
+
+        .checkbox-form label:before {
+          content: '';
+          top: 1px;
+          -webkit-appearance: none;
+          background-color: transparent;
+          border: rem(2) solid $bright-grey;
+          box-shadow: 0 rem(1) rem(2) rgba(0, 0, 0, 0.05),
+            inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+          padding: rem(6);
+          display: inline-block;
+          position: relative;
+          vertical-align: middle;
+          cursor: pointer;
+          margin-right: rem(5);
+          opacity: 0.5;
+        }
+        .checkbox-form input:checked + label:before {
+          background-color: $pigment-green;
+          border-color: $pigment-green;
+          opacity: 1;
+        }
+        .checkbox-form input:checked + label:after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: rem(4.4);
+          left: rem(6);
+          width: rem(5);
+          height: rem(12);
+          border: solid $white;
+          border-width: 0 rem(2) rem(2) 0;
+          transform: rotate(45deg);
+        }
+      }
+
+      .analyses-description {
+        padding-left: 20px;
+        font-weight: bold;
+        .details {
+          margin-top: 10px;
+          font-size: 13px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

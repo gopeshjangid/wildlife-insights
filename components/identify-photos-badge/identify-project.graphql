@@ -1,0 +1,7 @@
+query getIdentifyPhotosCount($projectId: Int!) {
+  getCountInIdentifyForProject(projectId: $projectId) {
+    meta {
+      totalItems
+    }
+  }
+}

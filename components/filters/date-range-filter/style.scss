@@ -1,0 +1,157 @@
+@import "css/settings";
+
+.RangeExample {
+  text-align: center;
+  width: rem(229);
+  background: $white;
+  z-index: 999;
+  .date-calendar {
+    position: absolute;
+    z-index: 1;
+  }
+  .dateWrapper {
+    display: flex;
+    border: solid rem(1) $date-range-border;
+    padding: rem(8) rem(3);
+    position: relative;
+    border-radius: rem(4);
+    .icon {
+      width:rem(18);
+      height:rem(20);
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      right: rem(10);
+      cursor: pointer;
+    }
+
+    .range-label {
+      position: absolute;
+      top: rem(-9);
+      left: rem(13);
+      background: $white;
+      padding: 0 rem(5);
+      font-size: rem(12);
+      color: $date-range-label;
+    }
+  }
+
+  .fromDate {
+    margin: 0 rem(2) 0 rem(5);
+  }
+
+  .toDate {
+    margin: 0 0 0 rem(5);
+  }
+
+  .btnDiv {
+    position: absolute;
+    right: rem(6);
+    top: rem(4);
+  }
+  .DayPicker {
+    box-shadow: rem(0) rem(4) rem(4) rgba(0, 0, 0, 0.25);
+    background-color: $white;
+    padding-top: rem(45);
+    padding-bottom: rem(45);
+    &-Caption {
+      font-size:rem(12);
+    }
+    &-Weekday {
+      font-size:rem(12);
+    }
+    &-Day {
+      font-size:rem(12);
+      min-width:rem(40);
+      height:rem(40);
+    }
+  }
+
+  .DayPicker-NavButton {
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .closeDayPicker {
+    position: absolute;
+    top: rem(20);
+    left: rem(15);
+  }
+
+  .DayPickerBottomPane {
+    position: absolute;
+    bottom: rem(20);
+    right: rem(20);
+    button {
+      color: $date-range-bottom-text-color;
+      margin-left: rem(11);
+    }
+  }
+  
+  .Selectable .DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
+    background-color: $date-range-selected-range !important;
+    color: $date-range-not-selected-day-bg;
+  }
+
+  .DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+    background-color: $date-range-selected-day-bg!important;
+    color: $white;
+  }
+  
+  .Selectable .DayPicker-Day {
+    border-radius: 0 !important;
+    &:focus {
+      outline: none;
+    }
+  }
+  .Selectable .DayPicker-Day--start, .Selectable .DayPicker-Day--end {
+    border-radius: 45% !important;
+    background-color: $white;
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  button {
+    position: relative;
+    float: right;
+    right: rem(0);
+    background: $white;
+    border: 0;
+    bottom: rem(2);
+  }
+
+  .disabled {
+    opacity: 0.5;
+  }
+
+  .close-image {
+    cursor: pointer;
+  }
+
+  p {
+    border: solid rem(1) $date-range-bottom-text-color;
+    padding: rem(2);
+  }
+
+  .DayPicker-wrapper, .DayPicker-Months {
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .dateInput {
+    width: 83px;
+    border: 0;
+    font-size: 0.875rem;
+    color: #757479;
+    &:focus {
+      outline:none
+    }
+  }
+
+  .invalidDate {
+    color: red;
+  }
+}

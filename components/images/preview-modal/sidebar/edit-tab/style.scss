@@ -1,0 +1,86 @@
+@import 'css/settings';
+
+.c-sidebar-edit-tab {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  font-size: rem(14);
+
+  .label {
+    display: inline-block;
+    margin-bottom: rem(5);
+    font-size: rem(15);
+  }
+
+  .rc-slider {
+    // Prevent the handle from being cut on the right
+    position: relative;
+    left: rem((12 / 2) + 2);
+    width: calc(100% - #{rem(12 + 4)});
+
+    &-rail {
+      background: rgba($body-color, 0.4);
+    }
+
+    &-track {
+      background: $body-color;
+    }
+
+    &-handle {
+      width: rem(12);
+      height: rem(12);
+      margin-left: rem(-6);
+      margin-top: rem(-4);
+      background: $bg-color-secondary;
+      border: 2px solid $body-color;
+      box-shadow: 0 rem(1) rem(4) 0 rgba($black, 0.2);
+
+      &:hover,
+      &:active {
+        border: 2px solid $body-color;
+        box-shadow: 0 rem(1) rem(4) 0 rgba($black, 0.2);
+      }
+
+      &:focus {
+        border: 2px solid $body-color;
+        box-shadow: 0 0 0 rem(2) $primary;
+      }
+    }
+  }
+
+  .presets {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    button {
+      width: 100%;
+      padding: map-get($spacers, 1) 0;
+      background: none;
+      border: 0;
+      padding: 0;
+      text-align: left;
+      cursor: pointer;
+
+      &:hover,
+      &:active {
+        background: rgba($primary, 0.3);
+      }
+
+      &:focus {
+        outline: 2px solid $primary;
+      }
+    }
+
+    .preview {
+      display: inline-block;
+      width: rem(100);
+      height: rem(68);
+      vertical-align: middle;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+}

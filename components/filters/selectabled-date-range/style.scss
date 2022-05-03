@@ -1,0 +1,246 @@
+@import 'css/settings';
+
+.selectable-range {
+  width: 314px !important;
+  .date-field-wrapper {
+    display: flex;
+    text-align: center;
+    width: 100% !important;
+    background: $white;
+    justify-content: space-around;
+  }
+
+  .date-calendar-error {
+    color: red !important;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .date-calendar {
+    position: absolute;
+    z-index: 1;
+    .day-number {
+      color: $bg-color-primary;
+      font-size: rem(12);
+    }
+  }
+  .calender-ok-btn {
+    color: #212529;
+    background-color: $primary;
+    border-color: $primary-alt;
+    border: 1px solid transparent;
+    font-size: 0.9375rem;
+    width: 42%;
+    line-height: 1.05rem;
+    border-radius: 0.225rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+  .calender-cancel-btn {
+    border: 1px solid $border-color;
+    height: 38px;
+    width: 52%;
+    border-radius: 7px;
+    font-size: 0.9375rem;
+    line-height: 1.05rem;
+    border-radius: 0.225rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  .separtor {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .dateWrapper {
+    display: flex;
+    border: solid rem(1) $date-range-border;
+    padding: rem(8) rem(3);
+    position: relative;
+    width: 49% !important;
+    border-radius: rem(4);
+    .icon {
+      width: rem(18);
+      height: rem(20);
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      right: rem(10);
+      cursor: pointer;
+    }
+
+    .range-label {
+      position: absolute;
+      top: rem(-9);
+      left: rem(13);
+      background: $white;
+      padding: 0 rem(5);
+      font-size: rem(12);
+      color: $date-range-label;
+    }
+  }
+  .fromDate {
+    margin: 0 rem(2) 0 rem(5);
+  }
+
+  .toDate {
+    margin: 0 0 0 rem(5);
+  }
+  .btnDiv {
+    position: absolute;
+    right: rem(6);
+    top: rem(4);
+  }
+  .DayPicker {
+    box-shadow: rem(0) rem(4) rem(4) rgba(0, 0, 0, 0.25);
+    background-color: $white;
+    padding-top: rem(45);
+    padding-bottom: rem(45);
+    &-Caption {
+      font-size: rem(12);
+    }
+    &-Weekday {
+      font-size: rem(12);
+    }
+    &-Day {
+      font-size: rem(12);
+      min-width: rem(40);
+      height: rem(40);
+    }
+  }
+  .DayPicker-NavButton {
+    &:focus {
+      outline: none;
+    }
+  }
+  .closeDayPicker {
+    width: 95% !important;
+    position: absolute;
+    top: rem(20);
+    left: rem(15);
+    button {
+      background-color: none !important;
+    }
+  }
+
+  .DayPickerBottomPane {
+    position: absolute;
+    width: 100% !important;
+    bottom: 0.1rem;
+    right: rem(20);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 0.3125rem 2.125rem;
+    width: 61%;
+    button {
+      margin-left: rem(11);
+      height: 38px;
+    }
+  }
+
+  .Selectable
+    .DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
+    background-color: $date-range-selected-range !important;
+    color: $date-range-not-selected-day-bg;
+  }
+
+  .DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+    background-color: $date-range-selected-day-bg !important;
+    color: $white;
+  }
+
+  .Selectable .DayPicker-Day {
+    border-radius: 0 !important;
+    &:focus {
+      outline: none;
+    }
+  }
+  .Selectable .DayPicker-Day--start,
+  .Selectable .DayPicker-Day--end {
+    border-radius: 45% !important;
+    background-color: $white;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    position: relative;
+    float: right;
+    right: rem(0);
+    background: $white;
+    border: 0;
+    height: rem(12);
+    width: rem(12);
+    bottom: rem(8);
+  }
+
+  .disabled {
+    opacity: 0.5;
+  }
+
+  .close-image {
+    cursor: pointer;
+  }
+
+  p {
+    border: solid rem(1) $date-range-bottom-text-color;
+    padding: rem(2);
+  }
+
+  .DayPicker-wrapper {
+    max-height: 300px !important;
+    overflow: auto !important;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .DayPicker-Months {
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    overflow: auto !important;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .dateInput {
+    width: 83px;
+    border: 0;
+    font-size: 0.875rem;
+    color: $bg-color-primary;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .invalidDate {
+    color: red;
+  }
+
+  .deployment-label {
+    font-size: 0.6em;
+    text-align: center;
+    border-radius: 73%;
+    height: 14px;
+    background: #a09ca0;
+    color: $white;
+    width: 14px;
+    border: 0px;
+    margin: 0 auto;
+  }
+  .grayed-out-date {
+    color: $bg-color-primary;
+    div.day-number,
+    .deployment-label {
+      color: #ebdfdf !important;
+      background-color: none;
+    }
+  }
+  .DayPicker-Day--start .day-number,
+  .DayPicker-Day--end .day-number {
+    color: $white !important;
+  }
+}

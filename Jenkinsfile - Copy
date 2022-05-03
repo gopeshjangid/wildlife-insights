@@ -1,0 +1,90 @@
+#!groovy
+
+def project = "${GCLOUD_PROJECT}"
+def tokens = "${env.JOB_NAME}".tokenize('/')
+def appName = tokens[0].toLowerCase()
+def imageTag = "gcr.io/${project}/${appName}:option_features.${env.BUILD_NUMBER}"
+def jenkinsStage = "${JENKINS_STAGE}"
+def branch = "${env.BRANCH_NAME}"
+
+println "Running Jenkins Pipeline"
+println "SCENARIO -> Stage: ${jenkinsStage} // Branch: ${branch}"
+
+pipeline {
+  agent {
+    kubernetes {
+      label 'builder-agent'
+      yaml """
+apiVersion: v1
+kind: Pod
+metadata:
+labels:
+  component: ci
+spec:
+  # Use service account that can deploy to all namespaces
+  serviceAccountName: cd-jenkins
+  volumes:
+  - name: container-builder-key
+    secret:
+      secretName: container-builder-key
+  containers:
+  - name: jnlp
+    env:
+    - name: JENKINS_URL
+      value: http://cd-jenkins
+  - name: node
+    image: node:10.12.0
+    command:
+    - cat
+    tty: true
+  - name: gcloud
+    image: gcr.io/cloud-builders/gcloud
+    volumeMounts:
+    - name: container-builder-key
+      mountPath: /var/secrets/google
+    env:
+    - name: GOOGLE_APPLICATION_CREDENTIALS
+      value: /var/secrets/google/key.json
+    command: ["/bin/sh","-c"]
+    args: ["gcloud auth activate-service-account --key-file=/var/secrets/google/key.json && cat"]
+    tty: true
+  - name: kubectl
+    image: gcr.io/cloud-builders/kubectl
+    command:
+    - cat
+    tty: true
+"""
+}
+  }
+  stages {
+    stage('1 - Test') {
+      when {
+        anyOf {
+        allOf {
+          expression { branch == 'feature/WI-1489-remove-option-calls'}
+        }
+        }
+      }
+      steps {
+        container('node') {
+          sh """
+            yarn && yarn test
+          """
+        }
+      }
+    }
+    stage('2 - Build and push image with Container Builder') {
+      steps {
+        script {
+          if (branch == 'feature/WI-1489-remove-option-calls') {
+            container('gcloud') {
+              sh "PYTHONUNBUFFERED=1 gcloud builds submit --config cloudbuild.yaml --substitutions _API_URL=\"https://test-v1.app.wildlifeinsights.org\",_BACKEND_API_URL=\"https://test-v1.api.wildlifeinsights.org\",_IS_STAGING=\"false\",_IMAGE_TAG=${imageTag} ."
+          }
+        }
+
+        }
+      }
+    }
+
+  }
+}

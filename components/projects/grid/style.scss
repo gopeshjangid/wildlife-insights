@@ -1,0 +1,47 @@
+@import 'css/settings';
+
+.c-projects-grid {
+  .organization-title {
+    color: $dark;
+
+    svg path {
+      fill: $primary;
+    }
+  }
+
+  .item {
+    position: relative;
+    margin-bottom: $grid-gutter-width;
+
+    .c-identify-photos-badge {
+      position: absolute;
+      top: #{-1 * rem(5)};
+      right: calc(#{-1 * rem(5)} + #{$grid-gutter-width} / 2);
+    }
+  }
+
+  .thumbnail {
+    height: rem(150);
+    margin-bottom: map-get($spacers, 2);
+    background-color: $border-color;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .item-title {
+    font-weight: $font-weight-bold;
+    color: $body-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .empty-org {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0 rem(5);
+    font-weight: 600;
+  }
+}

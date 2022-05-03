@@ -1,0 +1,3 @@
+mutation deleteInitiativePhotoList($initiativeId: ID!, $ids: [ID!]) {
+  deleteInitiativePhotoList(initiativeId: $initiativeId, id: $ids)
+}

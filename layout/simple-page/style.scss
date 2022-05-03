@@ -1,0 +1,23 @@
+@import 'css/settings';
+
+.l-simple-page-content {
+  padding-top: $margin-size + $header-size;
+  padding-bottom: $margin-size;
+
+  @media screen and (min-width: map-get($grid-breakpoints, 'sm')) {
+    padding-bottom: $margin-size;
+  }
+
+  .terms-privacy {
+    font-size: rem(14);
+    color: $grey;
+
+    p {
+      margin: map-get($spacers, 3) 0;
+    }
+
+    li {
+      margin: map-get($spacers, 2) 0;
+    }
+  }
+}

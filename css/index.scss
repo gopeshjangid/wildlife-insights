@@ -1,0 +1,24 @@
+@import 'settings';
+@import '~bootstrap/scss/bootstrap';
+@import '~nprogress/nprogress.css';
+@import '~rc-slider/assets/index.css';
+@import '~react-table/react-table.css';
+@import '~tippy.js/index.css';
+@import '~tippy.js/themes/light.css';
+@import '~react-day-picker/lib/style.css';
+@import '~@fortawesome/fontawesome-svg-core/styles.css';
+@import '~react-quill/dist/quill.snow.css';
+@import '~react-responsive-carousel/lib/styles/carousel.min.css';
+
+// Projects styles
+@import 'base';
+@import 'forms';
+
+// Common styles for components
+@import 'css/components/react-modal';
+@import 'css/components/react-tabs';
+@import 'css/components/button';
+@import 'css/components/progress';
+@import 'css/components/card';
+@import 'css/components/recharts';
+@import 'css/components/fa_icons';

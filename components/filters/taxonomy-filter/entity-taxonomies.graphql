@@ -1,0 +1,20 @@
+query getTaxonomies(
+  $entityType: entityType!
+  $entityId: Int!
+  $search: String
+  $sort: [Sort]
+) {
+  getTaxonomiesForEntity(
+    entityType: $entityType
+    entityId: $entityId
+    filters: { search: $search, searchNamesBy: scientificAndCommonName }
+    pagination: { pageSize: 5, sort: $sort }
+  ) {
+    data {
+      id
+      scientificName
+      commonNameEnglish
+      uniqueIdentifier
+    }
+  }
+}

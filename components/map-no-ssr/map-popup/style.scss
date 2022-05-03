@@ -1,0 +1,13 @@
+@import 'css/settings';
+
+.gm-style-iw-t {
+  .gm-style-iw-c {
+    max-width: rem(200);
+    padding: map-get($spacers, 3) map-get($spacers, 4);
+    color: $body-color;
+    font-size: rem(14);
+    font-weight: $font-weight-normal;
+    border-radius: rem(4);
+    box-shadow: $box-shadow;
+  }
+}

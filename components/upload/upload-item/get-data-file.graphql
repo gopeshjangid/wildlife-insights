@@ -1,0 +1,14 @@
+query getDataFiles(
+  $filters: DataFileFilters
+) {
+  getDataFilesForIdentify(
+    pagination: { pageSize: 1, pageNumber: 1 }
+    filters: $filters
+  ) {
+    data {
+      data {
+        filename
+      }
+    }
+  }
+}

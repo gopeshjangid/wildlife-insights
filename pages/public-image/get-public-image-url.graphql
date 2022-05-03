@@ -1,0 +1,5 @@
+query getDataFilePublicDownloadUrl($downloadId: Int!, $imageUUID: String! ) {
+  getDataFilePublicDownloadUrl( downloadId: $downloadId, imageUUID: $imageUUID) {
+    url
+  }
+}

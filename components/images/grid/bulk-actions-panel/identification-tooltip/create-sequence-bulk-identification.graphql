@@ -1,0 +1,6 @@
+mutation createSequenceIdentificationOutputBulk($body: SequenceIdentificationOutputBulkCreate!) {
+  createSequenceIdentificationOutputBulk(body: $body) {
+    id
+    sequenceId
+  }
+}

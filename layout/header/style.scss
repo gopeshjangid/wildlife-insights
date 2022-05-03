@@ -1,0 +1,199 @@
+@import 'css/settings';
+
+.l-header {
+  $nav-space: $margin-size;
+
+  position: relative;
+
+  border-top: 1px solid $border-color;
+  background: $white;
+  box-shadow: 2px 0 15px 0 rgba(31, 35, 35, 0.08);
+
+  z-index: 3;
+
+  .navbar-collapse {
+    position: relative;
+  }
+
+  @media screen and (min-width: map-get($grid-breakpoints, 'sm')) {
+    border-top: 0;
+    border-right: 1px solid $border-color;
+    width: 100%;
+
+    &.-fixed {
+      position: fixed;
+      z-index: 9;
+    }
+  }
+
+  .l-header-container {
+    display: flex;
+    height: $header-size-sm;
+
+    @media screen and (min-width: map-get($grid-breakpoints, 'sm')) {
+      height: $header-size;
+      padding-left: #{$out-space / 2 + rem(15)};
+      padding-right: #{$out-space / 2 + rem(15)};
+    }
+
+    @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+      padding-left: #{$out-space + rem(15)};
+      padding-right: #{$out-space + rem(15)};
+    }
+  }
+
+  &.-fixed,
+  &.-no-menu {
+    .l-header-container {
+      justify-content: center;
+    }
+  }
+
+  .brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $header-size;
+
+    img {
+      max-width: rem(247);
+    }
+
+    .logo-icon {
+      display: block;
+      width: rem(42);
+      height: rem(42);
+      text-indent: -99999px;
+    }
+
+    @media screen and (min-width: map-get($grid-breakpoints, 'sm')) {
+      width: auto;
+      background-color: transparent;
+
+      .logo-icon {
+        height: auto;
+        width: auto;
+        text-indent: 0;
+      }
+    }
+  }
+
+  .header-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $header-size;
+    margin-left: $nav-space;
+  }
+
+  .main-nav {
+    // display: flex;
+    // justify-content: flex-end;
+    // flex: 1 1 auto;
+
+    // ul {
+    //   display: flex;
+    //   list-style: none;
+    //   margin: 0;
+    //   padding: 0;
+    // }
+
+    li {
+      position: relative; // Needed for the photos badge
+      display: flex;
+      align-items: center;
+      margin: 0;
+      text-align: center;
+
+      @media screen and (min-width: map-get($grid-breakpoints, 'sm')) {
+        margin-left: $nav-space;
+      }
+
+      > .account {
+        border: none;
+        background: none;
+      }
+
+      > a,
+      > .account {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: rem(15) 0;
+        position: relative;
+        top: rem(2.5);
+
+        font-size: rem(15);
+        color: $grey;
+
+        border-bottom: rem(5) solid transparent;
+        transition: 0.2s ease border-color;
+        will-change: border-color;
+
+        &:after {
+          left: 0;
+          bottom: -7px;
+          position: absolute;
+          content: '';
+          display: block;
+          height: 5px;
+          width: 100%;
+          background: transparent;
+          border-radius: 2px;
+          will-change: background;
+          transition: background 0.3s ease-in;
+        }
+
+        &.-active,
+        &:hover {
+          text-decoration: none;
+          color: $dark;
+        }
+
+        &.-active {
+          &::after {
+            background-color: $primary;
+            box-shadow: $box-shadow-borders;
+          }
+        }
+
+        &.-disabled:hover {
+          color: $grey;
+          cursor: default;
+        }
+      }
+    }
+
+    @media screen and (max-width: map-get($grid-breakpoints, 'sm')) {
+      ul {
+        display: flex;
+      }
+    }
+  }
+
+  .lang-nav {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    .nav-link {
+      font-size: rem(15);
+      color: $grey;
+      border: none;
+      background: none;
+
+      &:hover {
+        text-decoration: none;
+        color: $dark;
+      }
+    }
+  }
+
+  .c-identify-photos-badge {
+    position: absolute;
+    top: calc(50% - #{map-get($spacers, 2)});
+    right: 0;
+    transform: translate(100%, -50%);
+  }
+}

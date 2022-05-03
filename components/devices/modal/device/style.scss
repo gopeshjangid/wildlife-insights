@@ -1,0 +1,18 @@
+@import 'css/settings';
+
+.c-device-modal {
+  max-width: rem(675);
+
+  .content-panel {
+    padding: rem(22) rem(45);
+    background: $body-bg;
+    border-radius: $border-radius;
+    box-shadow: 0 8px 11px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  .actions-panel {
+    display: flex;
+    justify-content: space-between;
+    padding-top: $margin-size;
+  }
+}

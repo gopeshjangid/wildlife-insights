@@ -1,0 +1,14 @@
+query getDiscoverFilters {
+  getDiscoverFilters {
+    countries
+    timespan {
+      start
+      end
+    }
+    projects {
+      id
+      name
+      shortName
+    }
+  }
+}

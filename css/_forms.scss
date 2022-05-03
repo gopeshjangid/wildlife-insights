@@ -1,0 +1,45 @@
+// Form
+.form-group,
+.form-row {
+  label {
+    color: $primary-alt;
+    font-weight: bold;
+  }
+
+  &.form-check label {
+    color: inherit;
+  }
+
+  fieldset {
+    padding: 0 #{$grid-gutter-width / 2};
+    border: rem(1) solid $input-border-color;
+    border-radius: $border-radius;
+
+    legend {
+      display: inline-block;
+      width: auto;
+      padding: 0 map-get($spacers, 2);
+    }
+  }
+
+  .valid-feedback,
+  .invalid-feedback {
+    display: block;
+  }
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: $margin-size;
+
+  .action-link {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
+
+.input-group-text {
+  box-shadow: $input-box-shadow;
+}

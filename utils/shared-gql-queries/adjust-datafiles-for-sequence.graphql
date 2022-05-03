@@ -1,0 +1,9 @@
+mutation adjustDataFilesForSequence(
+  $projectId: Int!
+  $deploymentId: Int!
+) {
+  adjustDataFilesForSequence(
+    projectId: $projectId
+    deploymentId: $deploymentId
+  )
+}

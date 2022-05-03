@@ -1,0 +1,6 @@
+mutation deleteDataFileList($dataFileIds: [Int]!) {
+  deleteDataFileList(idList: $dataFileIds) {
+    count
+  }
+}
+

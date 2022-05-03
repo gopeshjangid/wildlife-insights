@@ -1,0 +1,70 @@
+@import "css/settings";
+
+.c-image-selector {
+  width: 100%;
+  margin: rem(10) 0;
+
+  .card-section {
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .header {
+    padding: 0 rem(15) rem(10);
+    display: flex;
+    align-items: center;
+
+    .deployment-info {
+      display: flex;
+      width: 100%;
+      align-items: center;
+
+      .title-holder {
+        max-width: 55%;
+        word-break: break-word;
+      }
+
+      .title {
+        color: $black;
+      }
+
+      .subtitle {
+        font-size: rem(10);
+      }
+    }
+
+    .separator {
+      border-left: rem(1) solid $grey;
+      margin: 0 rem(15) 0 rem(20);
+      align-self: normal;
+    }
+
+    .grid-options {
+      min-width: 16%;
+    }
+  }
+
+  .classified-row {
+    display: flex;
+    align-items: center;
+    .more-info {
+      margin-left: rem(8);
+      z-index: 1;
+    }
+  }
+
+  .common-name {
+    padding-bottom: rem(4);
+    margin-left: rem(5);
+    user-select: none;
+  }
+
+  .common-name-selected {
+    margin-top: rem(5);
+  }
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

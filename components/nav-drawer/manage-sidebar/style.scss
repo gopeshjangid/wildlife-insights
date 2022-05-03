@@ -1,0 +1,66 @@
+@import 'css/settings';
+
+.c-manage-sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  > .sidebar-nav {
+    position: relative;
+    width: 100%;
+    flex: 1;
+    overflow: auto;
+    margin-top: $margin-size;
+
+    h3 {
+      margin-top: 25px;
+      padding-bottom: rem(5);
+      color: $grey;
+      font-size: rem(10);
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-bottom: 1px solid $border-color;
+    }
+
+    .nav-item {
+      position: relative;
+      display: inline-block;
+      color: $grey;
+      letter-spacing: 0.3px;
+      will-change: color;
+      transition: color .2s ease;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      &.-active,
+      &:hover {
+        color: $dark;
+      }
+
+      &.-active {
+        font-weight: bold;
+
+        &::after {
+          display: block;
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          background: $primary;
+          border-radius: 2px;
+          box-shadow: $box-shadow-borders;
+          height: 3px;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  > .sidebar-actions {
+    margin-top: $margin-size;
+    text-align: center;
+  }
+}

@@ -1,0 +1,15 @@
+query getDeployments($projectId: Int!, $name: String) {
+  getDeploymentsByProject(
+    projectId: $projectId
+    filters: { name: $name }
+    pagination: {
+      pageSize: 50
+      sort: { column: "deploymentName", order: "ASC" }
+    }
+  ) {
+    data {
+      id
+      deploymentName
+    }
+  }
+}

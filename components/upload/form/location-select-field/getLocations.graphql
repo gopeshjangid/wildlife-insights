@@ -1,0 +1,22 @@
+query getLocations(
+  $projectId: Int!
+  $filters: LocationFilters
+) {
+  getLocations(
+    projectId: $projectId,
+    pagination: {
+      pageSize: 1000,
+      sort: [
+        {column: "placename", order: "ASC"}
+      ]
+    },
+    filters: $filters
+  ) {
+    data {
+      id
+      placename
+      latitude
+      longitude
+    }
+  }
+}

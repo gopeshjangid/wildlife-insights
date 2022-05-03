@@ -1,0 +1,23 @@
+query getDeployments(
+  $pageSize: Int,
+  $pageNumber: Int,
+  $sort: [Sort],
+  $filters: DeploymentFilters
+) {
+  getDeployments(filters: $filters, pagination: { pageSize: $pageSize, pageNumber: $pageNumber, sort: $sort }) {
+      data {
+            id
+            deploymentName
+            startDatetime
+            endDatetime
+            location {
+              id
+              placename
+            }
+      }
+      meta {
+        totalPages
+        totalItems
+      }
+  }
+}

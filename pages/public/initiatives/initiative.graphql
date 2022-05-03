@@ -1,0 +1,31 @@
+query getInitiative($id: ID!) {
+  getInitiativePublic(initiativeId: $id) {
+    id
+    name
+    logo {
+      id
+      linkPublic
+    }
+    coverImage {
+      id
+      linkPublic
+    }
+    description
+    introduction
+    photos {
+      id
+      linkPublic
+    }
+    content
+    contactContent
+    contactEmail
+    partnerLogos {
+      id
+      linkPublic
+      text
+    }
+    videoUrl
+    isLocationPublic
+    purpose
+  }
+}

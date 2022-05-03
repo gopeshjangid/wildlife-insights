@@ -1,0 +1,74 @@
+@import "css/settings";
+
+.c-tutorial {
+  margin: rem(150) 0 0;
+  counter-reset: tutorial-steps;
+
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    margin: rem(150) 0;
+  }
+
+  .step {
+    position: relative;
+    margin-bottom: rem(150);
+
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      display: block;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      font-size: rem(250);
+      font-weight: $font-weight-bold;
+      color: $secondary;
+      text-align: center;
+      line-height: 1.2;
+      counter-increment: tutorial-steps;
+      content: counter(tutorial-steps);
+      pointer-events: none;
+    }
+
+    .c-identify-photos-badge {
+      vertical-align: super;
+      margin-left: map-get($spacers, 1);
+    }
+
+    div {
+      position: relative; // Put the text above the number
+    }
+
+    p {
+      position: relative; // Put the text above the number
+      font-weight: $font-weight-bold;
+      font-size: $font-size-sm;
+      color: $dark;
+    }
+  }
+}
+
+.c-tutorial-projects-list {
+  overflow-y: auto;
+  max-width: rem(150);
+  max-height: rem(150);
+  overflow-wrap: break-word;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    margin: 0 0 map-get($spacers, 2);
+    padding: 0;
+    width: 100%;
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+}

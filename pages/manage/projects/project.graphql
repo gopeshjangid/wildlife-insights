@@ -1,0 +1,8 @@
+query getProject($organizationId: Int!, $id: ID!) {
+  getProject(organizationId: $organizationId, projectId: $id) {
+    id
+    projectType
+    name
+    shortName
+  }
+}

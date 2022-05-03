@@ -1,0 +1,5 @@
+query getDataFilesByFileName($deploymentId: Int!, $fileNameList: [String]!) {
+  getDataFilesByFileName(deploymentId: $deploymentId, fileNameList: $fileNameList) {
+    exists
+  }
+}

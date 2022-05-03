@@ -1,0 +1,105 @@
+@import 'css/settings';
+
+.project-container {
+  .table-footer {
+    margin-left: 0% !important;
+    margin-right: 0% !important;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+
+    .back {
+      margin-right: rem(10);
+    }
+
+    button {
+      color: #212529;
+      background-color: #72c990;
+      border-color: #72c990;
+      border: 1px solid transparent;
+      padding: 0.6875rem 2.125rem;
+      font-size: 0.9375rem;
+      line-height: 1.05rem;
+      border-radius: 0.625rem;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+  }
+
+  .tab-container {
+    padding-top: 50px !important;
+    padding-left: 20px !important;
+    margin-top: 30px;
+    width: 30% !important;
+    border-left: 0.2px solid $border-color;
+    .react-tabs__tab {
+      color: $bright-grey;
+      font-weight: 600;
+      font-size: 0.9375rem;
+    }
+
+    .report-box {
+      margin-top: rem(20);
+      max-height: rem(481);
+      min-height: rem(281);
+      overflow: auto;
+      span {
+        font-size: rem(22);
+        font-weight: bold;
+      }
+    }
+    .anaytics-container {
+      .anaytics-item {
+        .heading {
+          font-weight: 700;
+        }
+
+        .analytics-content-list {
+          padding-left: 10px;
+        }
+      }
+    }
+
+    .react-tabs__tab--selected {
+      color: $primary !important;
+      font-weight: 600;
+      font-weight: bold;
+      font-size: 0.9375rem;
+    }
+  }
+
+  .text {
+    font-size: 0.9375rem;
+    line-height: 1.05rem;
+    color: $bright-grey;
+    font-weight: bold;
+  }
+
+  .main-wrapper {
+    display: flex;
+    min-height: 80vh;
+  }
+}
+.project-detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  tr {
+    height: 40px;
+    border-bottom: 1px solid $grey-chateau;
+    padding-bottom: 15px;
+
+    td {
+      color: $bright-grey;
+      font-weight: 400;
+      font-size: 0.9375rem;
+    }
+
+    .label-column {
+      width: 90% !important;
+    }
+    .count-column {
+      width: 10% !important;
+      text-align: right;
+    }
+  }
+}

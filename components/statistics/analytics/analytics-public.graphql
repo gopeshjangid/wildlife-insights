@@ -1,0 +1,9 @@
+query getAnalytics($projectId: Int) {
+  getAnalyticsPublic(projectId: $projectId) {
+    numImages
+    numSpecies
+    numDevices
+    numDeployments
+    wildlifeImagesCount
+  }
+}

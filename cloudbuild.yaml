@@ -1,0 +1,17 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'build',
+        '--build-arg',
+        'API_URL=${_API_URL}',
+        '--build-arg',
+        'BACKEND_API_URL=${_BACKEND_API_URL}',
+        '--build-arg',
+        'IS_STAGING=${_IS_STAGING}',
+        '-t',
+        '${_IMAGE_TAG}',
+        '.',
+      ]
+images:
+  - '${_IMAGE_TAG}'

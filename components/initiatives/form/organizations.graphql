@@ -1,0 +1,10 @@
+query getOrganizations {
+  getOrganizations(
+    pagination: { pageSize: 1000, sort: { column: "name", order: "ASC" } }
+  ) {
+    data {
+      id
+      name
+    }
+  }
+}

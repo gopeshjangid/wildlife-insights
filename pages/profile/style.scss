@@ -1,0 +1,54 @@
+@import 'css/settings';
+
+.c-permission-list {
+    margin-top: rem(75);
+    .table {
+      font-size: rem(14);
+      border: rem(0);
+      .rt-thead.-header {
+        box-shadow: none;
+  
+        .rt-th {
+          text-align: center;
+          font-weight: $font-weight-bold;
+          border-right: rem(0);
+          white-space: unset;
+          .active {
+            color: $primary-alt;
+          }
+        }
+        .-cursor-pointer {
+          div:first-child:after {
+            content: $sort-arrow-default;
+            margin-left: $sort-arrow-left-space;
+          }
+        }
+      }
+      .rt-tr {
+        border-bottom: solid rem(1) $grey;
+        padding: rem(10) rem(50) rem(10) rem(0);
+      }
+      .rt-tbody {
+          .rt-tr-group {
+            .rt-tr {
+                vertical-align: middle;
+                font-size: rem(14);
+                font-weight: 600;
+                .rt-td {
+                  white-space: unset;
+                  .inactive {
+                    .svg-inline--fa path {
+                      fill: $grey;
+                    }
+                  }
+                }
+              }
+          }
+      }
+    }
+
+    .request-access {
+      float: right;
+      margin-top: rem(18);
+    }
+}

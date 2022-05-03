@@ -1,0 +1,13 @@
+query getDevice($organizationId: Int!, $id: ID!) {
+  getDevice(organizationId: $organizationId, id: $id) {
+    id
+    name
+    make
+    model
+    serialNumber
+    purchaseDate
+    purchasePrice
+    productUrl
+    remarks
+  }
+}

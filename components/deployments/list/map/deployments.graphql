@@ -1,0 +1,17 @@
+query getDeployments($projectId: Int!) {
+  getDeploymentsByProject(
+    projectId: $projectId
+    pagination: { pageSize: 999 }
+  ) {
+    data {
+      id
+      deploymentName
+      location {
+        id
+        placename
+        latitude
+        longitude
+      }
+    }
+  }
+}

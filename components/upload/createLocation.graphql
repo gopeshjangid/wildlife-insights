@@ -1,0 +1,8 @@
+mutation createLocation($projectId: Int!, $body: LocationCreate!) {
+  createLocation(projectId: $projectId, body: $body) {
+    id
+    placename
+    latitudeStr
+    longitudeStr
+  }
+}

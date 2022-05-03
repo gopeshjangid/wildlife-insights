@@ -1,0 +1,26 @@
+query getLocations(
+  $projectId: Int!
+  $pageSize: Int
+  $pageNumber: Int
+  $sort: [Sort]
+  $filters: LocationFilters
+) {
+  getLocations(
+    projectId: $projectId
+    filters: $filters
+    pagination: { pageSize: $pageSize, pageNumber: $pageNumber, sort: $sort }
+  ) {
+    data {
+      id
+      placename
+      country
+      latitudeStr
+      longitudeStr
+      canDelete
+    }
+    meta {
+      totalPages
+      totalItems
+    }
+  }
+}

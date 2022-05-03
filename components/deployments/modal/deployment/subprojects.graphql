@@ -1,0 +1,13 @@
+query getSubProjects(
+  $projectId: Int!
+) {
+  getSubProjectsByProject(
+    projectId: $projectId
+    pagination: { pageSize: 999, sort: [{ column: "name", order: "ASC" }] }
+  ) {
+    data {
+      id
+      name
+    }
+  }
+}

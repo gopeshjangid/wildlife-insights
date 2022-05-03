@@ -1,0 +1,33 @@
+@import 'css/settings';
+
+.c-location-modal {
+  max-width: rem(675);
+
+  .content-panel {
+    padding: rem(22) rem(45);
+    background: $body-bg;
+    border-radius: $border-radius;
+    box-shadow: 0 8px 11px 0 rgba(0, 0, 0, 0.15);
+
+    .map-container {
+      position: relative;
+      top: rem(22);
+      left: #{-1 * rem(45)};
+      width: calc(100% + #{2 * rem(45)});
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+      overflow: hidden; // For the rounded corners
+
+      .c-map-no-ssr {
+        height: rem(250);
+        z-index: 0;
+      }
+    }
+  }
+
+  .actions-panel {
+    display: flex;
+    justify-content: space-between;
+    padding-top: $margin-size;
+  }
+}

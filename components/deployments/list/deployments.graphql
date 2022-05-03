@@ -1,0 +1,29 @@
+query getDeployments(
+  $projectId: Int!
+  $pageSize: Int
+  $pageNumber: Int
+  $sort: [Sort]
+  $filters: DeploymentFilters
+) {
+  getDeploymentsByProject(
+    projectId: $projectId
+    filters: $filters
+    pagination: { pageSize: $pageSize, pageNumber: $pageNumber, sort: $sort }
+  ) {
+    data {
+      id
+      canDelete
+      deploymentName
+      startDatetime
+      endDatetime
+      location {
+        id
+        placename
+      }
+    }
+    meta {
+      totalPages
+      totalItems
+    }
+  }
+}

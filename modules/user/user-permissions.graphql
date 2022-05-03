@@ -1,0 +1,46 @@
+query getParticipantData {
+  getParticipantData {
+    organizationRoles {
+      organization {
+        id
+        name
+      }
+      role {
+        id
+        name
+        permissions {
+          id
+          slug
+        }
+      }
+    }
+    initiativeRoles {
+      initiative {
+        id
+        name
+      }
+      role {
+        id
+        name
+        permissions {
+          id
+          slug
+        }
+      }
+    }
+    projectRoles {
+      project {
+        id
+        name
+      }
+      role {
+        id
+        name
+        permissions {
+          id
+          slug
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+@import 'css/settings';
+
+.c-devices-list {
+  .table {
+    font-size: rem(14);
+    border: 0;
+
+    // Increase the specificity to replace the default
+    // styles
+    .rt-thead.-header {
+      box-shadow: none;
+
+      .rt-th {
+        text-align: left;
+        font-weight: $font-weight-bold;
+        border-right: 0;
+
+        &.-sort-asc {
+          div:first-child:after {
+            content: $sort-arrow-up;
+            margin-left: $sort-arrow-left-space;
+          }
+          box-shadow: none;
+        }
+
+        &.-sort-desc {
+          div:first-child:after {
+            content: $sort-arrow-down;
+            margin-left: $sort-arrow-left-space;
+          }
+          box-shadow: none;
+        }
+      }
+      .-cursor-pointer {
+        div:first-child:after {
+          content: $sort-arrow-default;
+          margin-left: $sort-arrow-left-space;
+        }
+      }
+    }
+
+    .rt-td {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .name-cell {
+    padding: 0;
+    background: none;
+    border: 0;
+    color: darken($primary, 20%);
+    text-decoration: $link-decoration;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: $link-hover-decoration;
+    }
+  }
+  .actionbar {
+    margin-bottom: 0.8rem;
+
+    .actionbar-left {
+      background-color: $btn-bg-green;
+      border-radius: rem(5);
+      cursor: pointer;
+      margin-right: rem(23);
+
+      button {
+        padding: rem(4);
+        padding-left: 0;
+        margin: 0 rem(10);
+        height: rem(36);
+        &:focus, &:active {
+          box-shadow: none;
+        }
+
+        &:active:focus {
+          box-shadow: none;
+        }
+        
+        span {
+          color: $white;
+          font-size: rem(14);
+          margin-left: rem(10);
+          font-weight: normal;
+        }
+      }
+    }
+    .count-items {
+      margin-top: rem(0);
+      font-size: rem(13);
+      color: $black;
+    }
+  }
+}

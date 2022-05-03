@@ -1,0 +1,24 @@
+@import 'css/settings';
+
+.l-manage-page-content {
+  padding-left: #{$out-space / 2};
+  padding-right: #{$out-space / 2};
+
+  @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+    padding-left: $out-space;
+    padding-right: $out-space;
+  }
+
+  .l-sidebar-region {
+    position: sticky;
+    top: $header-size;
+    padding-top: $margin-size;
+    padding-bottom: $margin-size;
+    height: calc(100vh - #{$header-size});
+  }
+
+  .l-content-region {
+    padding-top: map-get($spacers, 3);
+    padding-bottom: $margin-size;
+  }
+}

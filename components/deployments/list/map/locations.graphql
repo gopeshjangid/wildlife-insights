@@ -1,0 +1,10 @@
+query getLocations($projectId: Int!) {
+  getLocations(projectId: $projectId, pagination: { pageSize: 999 }) {
+    data {
+      id
+      placename
+      latitude
+      longitude
+    }
+  }
+}

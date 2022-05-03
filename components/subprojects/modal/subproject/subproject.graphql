@@ -1,0 +1,7 @@
+query getSubProject($subProjectId: ID!) {
+  getSubProject(subProjectId: $subProjectId) {
+    id
+    name
+    design
+  }
+}

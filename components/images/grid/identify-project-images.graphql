@@ -1,0 +1,46 @@
+query getDataFiles(
+  $projectId: Int!
+  $pageSize: Int
+  $pageNumber: Int
+  $sort: [Sort]
+  $filters: DataFileFilters
+) {
+  getDataFilesForIdentifyForProject(
+    projectId: $projectId
+    pagination: { pageSize: $pageSize, pageNumber: $pageNumber, sort: $sort }
+    filters: $filters
+  ) {
+    data {
+      name
+      data {
+        id
+        sequenceId
+        filename
+        thumbnailUrl
+        timestamp
+        createdAt
+        lastModified
+        status
+        canDelete
+        boundingBoxes
+        deployment {
+          id
+          projectId
+          project {
+            id
+            deleteDataFilesWithIdentifiedHumans
+            disableCount
+          }
+          deploymentName
+        }
+      }
+    }
+    dataFileMeta {
+      burstCount
+      dataFileCount
+    }
+    meta {
+      totalPages
+    }
+  }
+}

@@ -1,0 +1,71 @@
+query getDiscoverData(
+  $endangeredSpecies: Boolean
+  $countries: [String]
+  $timespans: [TimespanInput]
+  $initiatives: [Int]
+  $taxonomies: [String]
+  $projects: [Int]
+  $metadataLicense: [String]
+  $imageLicense: [String]
+  $baitUse: [String]
+  $baitType: [String]
+  $sensorLayout: [String]
+  $sensorMethod: String
+  $sensorCluster: String
+  $taxonomyClass: [String]
+  $taxonomyOrder: [String]
+  $taxonomyFamily: [String]
+  $taxonomyGenus: [String]
+  $taxonomySpecies: [String]
+  $taxonomyCommonName: [String]
+  $featureTypes: [String]
+  $blankImages: String
+  $organizations: [Int]
+  $embargo: String
+  $continents: [String]
+) {
+  getDiscoverData(
+    filters: {
+      endangeredSpecies: $endangeredSpecies
+      countries: $countries
+      timespans: $timespans
+      initiatives: $initiatives
+      taxonomies: $taxonomies
+      projects: $projects
+      metadataLicense: $metadataLicense
+      imageLicense: $imageLicense
+      baitUse: $baitUse
+      baitType: $baitType
+      sensorLayout: $sensorLayout
+      sensorMethod: $sensorMethod
+      sensorCluster: $sensorCluster
+      taxonomyClass: $taxonomyClass
+      taxonomyOrder: $taxonomyOrder
+      taxonomyFamily: $taxonomyFamily
+      taxonomyGenus: $taxonomyGenus
+      taxonomySpecies: $taxonomySpecies
+      taxonomyCommonName: $taxonomyCommonName
+      featureTypes: $featureTypes
+      blankImages: $blankImages
+      organizations: $organizations
+      embargo: $embargo
+      continents: $continents
+    }
+  ) {
+    data {
+      counts {
+        organizations
+        initiatives
+        projects
+        species
+        dataFiles
+        devices
+        deployments
+        wildlifeImages
+        countries
+        samplingDays
+        locations
+      }
+    }
+  }
+}

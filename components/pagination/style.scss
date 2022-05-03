@@ -1,0 +1,188 @@
+@import 'css/settings';
+
+.c-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .paginator {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: rem(30);
+    font-size: rem(14);
+
+    &.-full-width {
+      margin-left: auto;
+    }
+
+    .btn-group {
+      border: $input-border-width solid $input-border-color;
+      border-radius: $border-radius-alt;
+      box-shadow: $box-shadow-sm;
+
+      button {
+        width: rem(30);
+        padding: 0;
+        border: none;
+        background: none;
+        cursor: pointer;
+        text-align: center;
+
+        &:first-of-type:not(:last-of-type) {
+          border-right: rem(1) solid $input-border-color;
+        }
+
+        &:focus {
+          outline: rem(2) solid $primary;
+        }
+
+        &[disabled] {
+          opacity: 0.4;
+          cursor: default;
+        }
+
+        svg path {
+          fill: $primary-alt;
+        }
+      }
+    }
+
+    .page-info {
+      margin: 0 map-get($spacers, 3);
+
+      input {
+        display: inline-block;
+        height: rem(30);
+        // If you change the padding, change the style property of the
+        // input accordingly
+        padding: 0 map-get($spacers, 1);
+        text-align: center;
+        border: $input-border-width solid $input-border-color;
+        border-radius: $border-radius-alt;
+        box-shadow: $box-shadow-sm;
+      }
+
+      .page-total {
+        display: inline-block;
+        margin-left: map-get($spacers, 2);
+      }
+    }
+  }
+
+  .per-page {
+    font-size: rem(14);
+
+    > div {
+      display: inline-block;
+      margin-right: map-get($spacers, 2);
+    }
+
+    .dropdown-button {
+      display: inline-block;
+      width: auto;
+      height: rem(30);
+      padding: 0 map-get($spacers, 2);
+      border: $input-border-width solid $input-border-color;
+      border-radius: $border-radius-alt;
+      box-shadow: $box-shadow-sm;
+      background: none;
+      font-size: rem(14);
+      cursor: pointer;
+
+      &:disabled {
+        color: $body-color;
+        opacity: 0.6;
+        cursor: default;
+
+        svg {
+          opacity: 0.6;
+        }
+      }
+
+      &:focus {
+        outline: 2px solid $primary;
+      }
+
+      svg {
+        vertical-align: middle;
+
+        path {
+          fill: darken($primary, 20%);
+        }
+      }
+    }
+
+    .select {
+      position: absolute;
+      top: #{-1 * map-get($spacers, 2)};
+      left: 50%;
+      transform: translate(-50%, -100%);
+      width: rem(80);
+      background-color: $white;
+      border-radius: rem(4);
+      box-shadow: $box-shadow;
+      z-index: 2;
+
+      &::after {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: rem(12);
+        height: rem(12);
+        background-color: $white;
+        transform: translate(-50%, rem(6)) rotate(45deg);
+        transform-origin: center center;
+        border-bottom: 1px solid rgba(darken($primary, 20%), 0.15);
+        border-right: 1px solid rgba(darken($primary, 20%), 0.15);
+        content: '';
+      }
+
+      &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+      }
+
+      &__control {
+        display: none;
+      }
+
+      &__indicators {
+        svg path {
+          fill: rgba($black, 0.3);
+        }
+      }
+
+      &__placeholder,
+      &__input,
+      &__menu-notice {
+        font-size: rem(14);
+      }
+
+      &__menu {
+        position: static;
+        margin-top: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      &__option {
+        font-size: rem(14);
+        cursor: pointer;
+
+        &--is-focused {
+          background-color: rgba($primary, 0.3);
+        }
+
+        &--is-selected {
+          background: darken($primary, 20%);
+        }
+      }
+    }
+  }
+}

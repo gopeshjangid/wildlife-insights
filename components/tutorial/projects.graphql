@@ -1,0 +1,16 @@
+query getProjects {
+  getProjects(
+    pagination: {
+      pageSize: 999,
+      sort: { column: "name", order: "ASC" }
+    }
+  ) {
+    data {
+      id
+      name
+      organization {
+        id
+      }
+    }
+  }
+}

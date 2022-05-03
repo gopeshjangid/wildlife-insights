@@ -1,0 +1,31 @@
+@import 'css/settings';
+
+// Increase the specificity to override the default styles
+.tippy-popper {
+  max-width: none !important;
+  z-index: 11000 !important; // Needs to be above the z-index of the modal
+
+  div.tippy-tooltip.light-theme {
+    padding: rem(15);
+    color: $body-color;
+    // font-size: 1rem;
+    border-radius: $border-radius;
+    // box-shadow: 0 rem(10) rem(15) rem(1) rgba(darken($primary, 20%), 0.15),
+    //   0 0 rem(2) 0 rgba(darken($primary, 20%), 0.3);
+
+    // Styles not implemented for the tip on top
+    // Use .tippy-popper[x-placement^="top"] for this
+    // .arrow-regular {
+    //   top: 100%;
+    //   width: rem(12);
+    //   height: rem(12);
+    //   transform: translate(0, rem(-6)) rotate(45deg);
+    //   transform-origin: center center;
+    //   border: 0;
+    //   border-bottom: 1px solid rgba(darken($primary, 20%), 0.15) !important;
+    //   border-right: 1px solid rgba(darken($primary, 20%), 0.15) !important;
+    //   background: $white;
+    //   z-index: -1;
+    // }
+  }
+}

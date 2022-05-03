@@ -1,0 +1,9 @@
+query getOrganization($organizationId: ID!) {
+  getOrganization(organizationId: $organizationId) {
+    id
+    name
+    projectType
+    imageProjectCount
+    sequenceProjectCount
+  }
+}

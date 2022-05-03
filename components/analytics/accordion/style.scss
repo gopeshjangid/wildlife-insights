@@ -1,0 +1,37 @@
+@import "css/settings";
+
+.accordion-container {
+  padding: 15px;
+
+  .accordion-heading {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .accordion-title {
+      font-weight: 300;
+      font-size: 17px;
+    }
+    .accordion-btn {
+      cursor: pointer;
+    }
+  }
+
+  .accordion-item {
+    margin-bottom: 15px;
+    border-bottom: 2px solid $border-color;
+    padding-bottom: 10px;
+  }
+
+  .accordion-content {
+    display: none;
+    padding: 10px;
+    p {
+      font-size: 13px;
+    }
+  }
+
+  .active-item {
+    display: block;
+  }
+}

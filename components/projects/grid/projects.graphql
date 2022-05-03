@@ -1,0 +1,17 @@
+query getProjects($organizationId: Int, $initiativeId: Int) {
+  getProjects(
+    organizationId: $organizationId
+    initiativeId: $initiativeId
+    pagination: { pageSize: 999 }
+  ) {
+    data {
+      id
+      name
+      shortName
+      organization {
+        id
+        name
+      }
+    }
+  }
+}

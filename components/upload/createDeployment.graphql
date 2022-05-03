@@ -1,0 +1,16 @@
+mutation createDeployment($projectId: Int!, $body: DeploymentCreate!) {
+  createDeployment(projectId: $projectId, body: $body) {
+    id
+    deploymentIdentifier
+    deploymentName
+    startDatetime
+    endDatetime
+    locationId
+    sensorOrientation
+    sensorHeight
+    deviceId
+    sensorFailureDetails
+    metadata
+    quietPeriod
+  }
+}

@@ -1,0 +1,275 @@
+@import 'css/settings';
+
+.analytics-filter-container {
+  width: 100%;
+  margin-top: 20px;
+  height: 800px !important;
+
+  button {
+    color: $bg-color-primary;
+    border-color: $primary;
+    border: 1px solid transparent;
+    padding: 0.6875rem 2.125rem;
+    font-size: 0.9375rem;
+    line-height: 1.05rem;
+    border-radius: 0.625rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  .checkbox-form input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    z-index: 999 !important;
+  }
+
+  .checkbox-form label {
+    position: relative;
+    cursor: pointer;
+  }
+  .preset-container {
+    width: 90%;
+    margin-bottom: 26px;
+    .filter-__menu-list {
+      z-index: 99999;
+    }
+  }
+  .checkbox-form label:before {
+    content: '';
+    top: 1px;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: rem(2) solid $bright-grey;
+    box-shadow: 0 rem(1) rem(2) rgba(0, 0, 0, 0.05),
+      inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: rem(6);
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: rem(5);
+    opacity: 0.5;
+  }
+  .checkbox-form input:checked + label:before {
+    background-color: $pigment-green;
+    border-color: $pigment-green;
+    opacity: 1;
+  }
+  .checkbox-form input:checked + label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: rem(4.4);
+    left: rem(6);
+    width: rem(5);
+    height: rem(12);
+    border: solid $white;
+    border-width: 0 rem(2) rem(2) 0;
+    transform: rotate(45deg);
+  }
+  .tab-container {
+    padding-top: 50px !important;
+    padding-left: 20px !important;
+    width: 23%;
+    border-left: 0.2px solid $border-color;
+    .react-tabs__tab {
+      color: $bg-color-primary;
+      font-weight: 600;
+      font-size: 0.9375rem;
+    }
+
+    .react-tabs__tab--selected {
+      color: $primary !important;
+      font-weight: 600;
+      font-weight: bold;
+      font-size: 0.9375rem;
+    }
+
+    .project-detail-table {
+      width: 100%;
+      border-collapse: collapse;
+      tr {
+        height: 40px;
+        border-bottom: 1px solid $border-color;
+        padding-bottom: 15px;
+
+        td {
+          color: $bg-color-secondary;
+          font-weight: 400;
+          font-size: 0.9375rem;
+        }
+      }
+    }
+  }
+  .report-tab {
+    margin-top: rem(35);
+    span {
+      font-weight: bold;
+      margin-bottom: rem(21);
+      font-size: rem(15);
+    }
+    .species-label {
+      color: $primary-alt !important;
+    }
+  }
+  .deployment-btn-space {
+    width: '5%';
+  }
+  .view-deployment-box {
+    button {
+      border: 1px solid $border-color !important;
+      background: $white;
+      border-radius: 0;
+    }
+  }
+  .date-row-box {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-around;
+    .icon-box {
+      padding-top: rem(10);
+      padding-left: rem(10);
+    }
+  }
+  .add-date-btn {
+    font-weight: 500;
+  }
+  .close-icon {
+    cursor: pointer;
+  }
+  .date-row {
+    display: flex;
+    margin-bottom: rem(20);
+  }
+  .preset-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+  }
+  .advacned-filter-container {
+    margin-top: 30px;
+    height: 300px;
+    width: 80%;
+    margin-left: 5px;
+    .save-filter-checkbox {
+      padding-top: 20px;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      line-height: 14px;
+      justify-content: space-between;
+      width: 332px;
+      label {
+        font-weight: bold;
+        font-size: 13px;
+      }
+    }
+    .filter-column {
+      width: 100% !important;
+      border: 1px solid $border-color;
+
+      .filter-row {
+        text-align: left;
+        font-weight: bold;
+        font-size: 12px;
+        padding-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+      .selected-row {
+        background: $border-color;
+        border-left: 4px solid $primary;
+      }
+    }
+    .search-column,
+    .select-column {
+      width: 25%;
+      border: 1px solid $border-color;
+      margin: 0 auto;
+      .search-header-bar {
+        width: 100%;
+        border-bottom: 1px solid $border-color;
+        text-align: center;
+        padding: 10px;
+        padding-left: 22px;
+        justify-content: flex-start;
+        margin: 0 auto;
+        line-height: 12px;
+        label {
+          font-weight: bold;
+          margin-left: 10px;
+        }
+      }
+      .c-text-filter {
+        width: 100% !important;
+        input {
+          width: 86% !important;
+          border-bottom: none !important;
+        }
+      }
+      .top-bar {
+        padding: 6px !important;
+      }
+      .search-row {
+        width: 100%;
+        padding: 10px;
+        padding-left: 22px;
+        justify-content: flex-start;
+        margin: 0 auto;
+        line-height: 12px;
+        label {
+          margin-left: 10px;
+        }
+      }
+    }
+    .select-column {
+      .top-bar {
+        padding: 9px !important;
+      }
+    }
+    .top-bar {
+      font-weight: 500px;
+    }
+    .tabs-container,
+    .top-bar {
+      padding: 13px;
+      padding-left: 10px;
+      padding-bottom: 5px;
+      margin-bottom: 0.001rem !important;
+      margin-top: 1rem !important;
+    }
+    .react-tabs__tab-panel {
+      padding-left: 0px;
+    }
+  }
+  .add-btn-container {
+    margin-bottom: 2rem;
+    button {
+      background: none;
+      color: $primary;
+    }
+  }
+
+  .row {
+    display: flex;
+  }
+  .form-container {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    width: 280px;
+  }
+  .text {
+    font-size: 0.9375rem;
+    line-height: 1.05rem;
+    color: $bg-color-primary;
+    font-weight: bold;
+  }
+}

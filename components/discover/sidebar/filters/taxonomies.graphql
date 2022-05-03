@@ -1,0 +1,13 @@
+query getTaxonomies($search: String, $sort: [Sort]) {
+  getTaxonomiesPublic(
+    filters: { search: $search, searchNamesBy: scientificAndCommonName }
+    pagination: { pageSize: 50, sort: $sort }
+  ) {
+    data {
+      id
+      scientificName
+      commonNameEnglish
+      uniqueIdentifier
+    }
+  }
+}

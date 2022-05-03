@@ -1,0 +1,116 @@
+@import 'css/settings';
+
+div.c-image-preview-modal.ReactModal__Content {
+  width: calc(100vw - #{2 * $out-space});
+  height: calc(100vh - #{2 * map-get($spacers, 5)});
+  padding: 0;
+  background-color: $body-bg;
+
+  > .custom-container {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    height: 100%;
+
+    > .close-button {
+      position: absolute;
+      top: #{-1 * map-get($spacers, 2)};
+      right: 0;
+      height: rem(35);
+      width: rem(35);
+      padding: 0;
+      border-radius: 100%;
+      transform: translateY(-100%);
+
+      .svg-inline--fa {
+        path {
+          fill: $body-color;
+        }
+      }
+    }
+
+    > .previous-button,
+    > .next-button {
+      position: absolute;
+      top: 50%;
+      height: rem(35);
+      width: rem(35);
+      padding: 0;
+      border: 0;
+      border-radius: 100%;
+      background: none;
+      font-size: $font-size-lg;
+
+      .svg-inline--fa {
+        path {
+          fill: $white;
+        }
+      }
+    }
+
+    > .previous-button {
+      left: #{-1 * map-get($spacers, 2)};
+      transform: translate(-100%, -50%);
+    }
+
+    > .next-button {
+      right: #{-1 * map-get($spacers, 2)};
+      transform: translate(100%, -50%);
+    }
+  }
+
+  .c-sidebar {
+    flex-basis: rem(330);
+    flex-shrink: 0;
+  }
+
+  .main {
+    position: relative;
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    .center-section {
+      flex-grow: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      overflow: hidden;
+
+      .c-image-preview {
+        flex-grow: 1;
+      }
+    }
+
+    .loading-section {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+  }
+
+  .common-name-label {
+    font-size: rem(13);
+    border-radius: 50%;
+    width: rem(25);
+    text-align: center;
+    font-weight: 600;
+    color: #000;
+    &:not(:nth-child(0n)) {
+      margin-left: rem(5);
+    }
+  }
+
+  .dotted-badge {
+    border: dotted rem(2) #ccc;
+  }
+
+  .solid-badge {
+    border: solid rem(2) rgb(122, 122, 122);
+    background-color: $primary;
+  }
+}

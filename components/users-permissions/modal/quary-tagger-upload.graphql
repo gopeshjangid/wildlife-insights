@@ -1,0 +1,9 @@
+query getProject($organizationId: Int!, $projectId: ID!) {
+  getProject(
+   projectId: $projectId,
+   organizationId: $organizationId
+  ) {
+      id
+      taggerUpload
+  }
+}
